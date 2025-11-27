@@ -1,0 +1,125 @@
+:root {
+    --primary-color: #00ffc6;
+    --background-dark: #0f2027;
+    --background-mid: #203a43;
+    --background-light: #2c5364;
+    --text-light: #f4f4f4;
+    --card-bg: rgba(255, 255, 255, 0.06);
+    --hover-bg: rgba(255, 255, 255, 0.12);
+    --shadow-color: rgba(0, 255, 198, 0.3);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, var(--background-dark), var(--background-mid), var(--background-light));
+    color: var(--text-light);
+    min-height: 100vh;
+}
+
+nav {
+    background-color: rgba(255, 255, 255, 0.03);
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 6px;
+}
+
+nav a:hover {
+    color: var(--primary-color);
+    background-color: rgba(0, 255, 198, 0.1);
+    box-shadow: 0 0 8px var(--shadow-color);
+}
+
+header {
+    text-align: center;
+    padding: 60px 20px 40px;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+    color: var(--primary-color);
+    text-shadow: 0 0 4px rgba(0, 255, 198, 0.6);
+    /* ظل أخف */
+}
+
+header p {
+    font-size: 1.3rem;
+    color: #ccc;
+    margin-top: 12px;
+    font-weight: 500;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto 60px;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: 14px;
+    padding: 25px 30px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transition: all 0.35s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card:hover {
+    background-color: var(--hover-bg);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px var(--shadow-color);
+}
+
+.card a {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.25rem;
+    text-decoration: none;
+    margin-bottom: 10px;
+    transition: text-decoration 0.3s ease;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+.card p {
+    color: #ddd;
+    font-size: 1rem;
+    line-height: 1.4;
+    flex-grow: 1;
+}
+
+footer {
+    text-align: center;
+    color: #bbb;
+    padding: 50px 20px 30px;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
