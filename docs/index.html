@@ -1,0 +1,1347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loai H. · Electrical Engineer · Solar PV</title>
+  <meta name="description"
+    content="Electrical Engineer specializing in Solar PV Design, PVsyst, Electrical Systems and Renewable Energy Engineering." />
+  <meta property="og:title" content="Loai H. · Electrical Engineer · Solar PV" />
+  <meta property="og:description" content="Solar PV Design · PVsyst · Electrical Systems · Renewable Energy" />
+  <meta name="theme-color" content="#07111F" />
+  <link rel="icon" href="#" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    /* ----- CSS reset & variables ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --navy: #07111F;
+      --dark-navy: #0B1728;
+      --card-bg: #101F33;
+      --blue: #00B8FF;
+      --orange: #FF9D00;
+      --yellow: #FFD166;
+      --white: #F5F7FA;
+      --gray: #8FA3B8;
+      --font: 'Inter', sans-serif;
+      --max-w: 1240px;
+      --cursor-ring: rgba(0, 184, 255, 0.2);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--navy);
+      color: var(--white);
+      font-family: var(--font);
+      line-height: 1.5;
+      overflow-x: hidden;
+      cursor: default;
+    }
+
+    a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    .container {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section-pad {
+      padding: 90px 0;
+    }
+
+    .gold {
+      color: var(--orange);
+    }
+
+    .blue {
+      color: var(--blue);
+    }
+
+    .yellow {
+      color: var(--yellow);
+    }
+
+    .text-muted {
+      color: var(--gray);
+    }
+
+    .section-label {
+      display: block;
+      font-size: 0.7rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 8px;
+    }
+
+    h2 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+    }
+
+    h3 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 34px;
+      border: 1.5px solid var(--blue);
+      border-radius: 60px;
+      color: var(--white);
+      font-weight: 600;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: 0.25s;
+      background: transparent;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .btn:hover {
+      background: var(--blue);
+      color: var(--navy);
+      box-shadow: 0 0 30px rgba(0, 184, 255, 0.2);
+    }
+
+    .btn-orange {
+      border-color: var(--orange);
+      color: var(--orange);
+    }
+
+    .btn-orange:hover {
+      background: var(--orange);
+      color: var(--navy);
+      box-shadow: 0 0 30px rgba(255, 157, 0, 0.2);
+    }
+
+    .btn-yellow {
+      border-color: var(--yellow);
+      color: var(--yellow);
+    }
+
+    .btn-yellow:hover {
+      background: var(--yellow);
+      color: var(--navy);
+    }
+
+    /* ----- navbar ----- */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 18px 36px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 999;
+      background: rgba(7, 17, 31, 0.6);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      transition: 0.3s;
+    }
+
+    .navbar.scrolled {
+      padding: 10px 36px;
+      background: rgba(7, 17, 31, 0.92);
+    }
+
+    .nav-logo {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: var(--white);
+    }
+
+    .nav-logo span {
+      color: var(--orange);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--gray);
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      transition: 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--white);
+    }
+
+    .nav-cv {
+      border: 1px solid var(--blue);
+      padding: 6px 20px;
+      border-radius: 40px;
+      color: var(--blue) !important;
+      font-weight: 600;
+    }
+
+    .nav-cv:hover {
+      background: var(--blue);
+      color: var(--navy) !important;
+    }
+
+    .mobile-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--white);
+      font-size: 1.6rem;
+      cursor: pointer;
+    }
+
+    /* ----- scroll indicator ----- */
+    .scroll-indicator {
+      position: fixed;
+      right: 30px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 3px;
+      height: 160px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 6px;
+      z-index: 99;
+      overflow: hidden;
+    }
+
+    .scroll-indicator .fill {
+      width: 100%;
+      height: 0%;
+      background: linear-gradient(to bottom, var(--blue), var(--orange), var(--yellow));
+      border-radius: 6px;
+      transition: height 0.1s;
+    }
+
+    /* ----- hero ----- */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      background: radial-gradient(circle at 20% 30%, #0f2a44, var(--navy) 80%);
+    }
+
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(rgba(0, 184, 255, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 184, 255, 0.03) 1px, transparent 1px);
+      background-size: 50px 50px;
+      pointer-events: none;
+    }
+
+    .hero-particles {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .particle {
+      position: absolute;
+      width: 3px;
+      height: 3px;
+      background: var(--blue);
+      border-radius: 50%;
+      opacity: 0.2;
+      animation: floatP 22s infinite linear;
+    }
+
+    @keyframes floatP {
+      0% {
+        transform: translateY(0) translateX(0) scale(0.8);
+        opacity: 0.1;
+      }
+
+      50% {
+        opacity: 0.6;
+        transform: translateY(-160px) translateX(50px) scale(1.4);
+      }
+
+      100% {
+        transform: translateY(-320px) translateX(100px) scale(0.6);
+        opacity: 0;
+      }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+      padding: 40px 0;
+    }
+
+    .hero-badge {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .hero-badge .status {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.8rem;
+      color: var(--gray);
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      background: #4caf50;
+      border-radius: 50%;
+      display: inline-block;
+      animation: pulseDot 2s infinite;
+    }
+
+    @keyframes pulseDot {
+      0% {
+        opacity: 0.5;
+      }
+
+      50% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0.5;
+      }
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.05;
+      margin: 10px 0 18px;
+    }
+
+    .hero h1 .gold {
+      color: var(--orange);
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: var(--gray);
+      max-width: 520px;
+      margin-bottom: 28px;
+    }
+
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .hero-cta .secondary-link {
+      color: var(--gray);
+      font-weight: 500;
+      border-bottom: 1px solid transparent;
+      transition: 0.2s;
+    }
+
+    .hero-cta .secondary-link:hover {
+      color: var(--white);
+      border-color: var(--orange);
+    }
+
+    /* photo panel */
+    .hero-photo-panel {
+      position: absolute;
+      right: 5%;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 320px;
+      height: 340px;
+      background: var(--card-bg);
+      border-radius: 32px;
+      border: 1px solid rgba(0, 184, 255, 0.2);
+      box-shadow: 0 0 60px rgba(0, 184, 255, 0.05);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(4px);
+      overflow: hidden;
+      transition: 0.3s;
+      z-index: 2;
+    }
+
+    .hero-photo-panel .photo-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #0f2a44, #07111F);
+      color: var(--gray);
+      font-size: 0.8rem;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .hero-photo-panel .photo-placeholder i {
+      font-size: 3rem;
+      color: var(--orange);
+      opacity: 0.4;
+      margin-bottom: 12px;
+    }
+
+    .photo-labels {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .photo-labels span {
+      background: rgba(0, 184, 255, 0.1);
+      border: 1px solid rgba(0, 184, 255, 0.2);
+      border-radius: 30px;
+      padding: 2px 12px;
+      font-size: 0.6rem;
+      color: var(--blue);
+      letter-spacing: 1px;
+    }
+
+    /* hero energy svg (minimal) */
+    .hero-energy {
+      position: absolute;
+      left: 5%;
+      bottom: 12%;
+      z-index: 1;
+      opacity: 0.3;
+      display: flex;
+      gap: 4px;
+      align-items: center;
+      font-size: 0.6rem;
+      color: var(--gray);
+    }
+
+    .hero-energy .line {
+      width: 30px;
+      height: 1px;
+      background: var(--blue);
+    }
+
+    .hero-energy .line.orange {
+      background: var(--orange);
+    }
+
+    .hero-energy .line.yellow {
+      background: var(--yellow);
+    }
+
+    /* ----- ticker ----- */
+    .ticker-wrap {
+      background: var(--dark-navy);
+      border-top: 1px solid rgba(255, 255, 255, 0.03);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+      overflow: hidden;
+      padding: 14px 0;
+    }
+
+    .ticker {
+      display: flex;
+      gap: 40px;
+      animation: tickerScroll 28s linear infinite;
+      white-space: nowrap;
+    }
+
+    .ticker:hover {
+      animation-play-state: paused;
+    }
+
+    .ticker span {
+      color: var(--gray);
+      font-weight: 400;
+      letter-spacing: 1px;
+      font-size: 0.85rem;
+    }
+
+    .ticker span i {
+      color: var(--blue);
+      margin-right: 6px;
+    }
+
+    @keyframes tickerScroll {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    /* cards */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 24px;
+      padding: 28px 24px;
+      backdrop-filter: blur(4px);
+      transition: 0.3s;
+      cursor: default;
+    }
+
+    .card:hover {
+      border-color: var(--blue);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .card .icon {
+      color: var(--orange);
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+    }
+
+    .card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 10px;
+    }
+
+    .card-tags span {
+      background: rgba(0, 184, 255, 0.06);
+      border: 1px solid rgba(0, 184, 255, 0.08);
+      border-radius: 30px;
+      padding: 2px 14px;
+      font-size: 0.7rem;
+      color: var(--gray);
+    }
+
+    /* project cards */
+    .project-card {
+      background: var(--card-bg);
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    .project-card:hover {
+      border-color: var(--orange);
+      transform: scale(1.01);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    .project-card .img-placeholder {
+      height: 200px;
+      background: linear-gradient(135deg, #0f2a44, #07111F);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gray);
+      font-size: 0.8rem;
+    }
+
+    .project-card .img-placeholder i {
+      font-size: 2.4rem;
+      opacity: 0.3;
+      margin-right: 12px;
+    }
+
+    .project-info {
+      padding: 22px;
+    }
+
+    .project-info .cat {
+      color: var(--blue);
+      font-size: 0.65rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .project-info h3 {
+      font-size: 1.2rem;
+      margin: 4px 0;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin: 10px 0;
+    }
+
+    .project-tags span {
+      background: rgba(255, 255, 255, 0.04);
+      border-radius: 30px;
+      padding: 2px 12px;
+      font-size: 0.65rem;
+      color: var(--gray);
+    }
+
+    .project-cta {
+      color: var(--orange);
+      font-weight: 600;
+      display: inline-block;
+      margin-top: 8px;
+    }
+
+    /* filter */
+    .filter-bar {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 32px;
+    }
+
+    .filter-btn {
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 40px;
+      padding: 6px 20px;
+      color: var(--gray);
+      font-size: 0.75rem;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .filter-btn.active {
+      border-color: var(--orange);
+      color: var(--white);
+      background: rgba(255, 157, 0, 0.08);
+    }
+
+    .filter-btn:hover {
+      border-color: var(--blue);
+    }
+
+    /* workflow */
+    .workflow-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+      justify-content: center;
+    }
+
+    .wf-node {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 60px;
+      padding: 10px 26px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      transition: 0.2s;
+      cursor: default;
+    }
+
+    .wf-node .num {
+      color: var(--blue);
+      margin-right: 8px;
+    }
+
+    .wf-node:hover {
+      border-color: var(--orange);
+      background: rgba(255, 157, 0, 0.04);
+    }
+
+    /* evidence */
+    .evidence-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 18px;
+    }
+
+    .evidence-item {
+      background: var(--card-bg);
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      border-radius: 16px;
+      padding: 20px 12px;
+      text-align: center;
+      transition: 0.2s;
+      cursor: pointer;
+    }
+
+    .evidence-item:hover {
+      border-color: var(--blue);
+    }
+
+    .evidence-item i {
+      font-size: 2rem;
+      color: var(--orange);
+      opacity: 0.5;
+    }
+
+    /* calculators */
+    .calc-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      border-radius: 20px;
+      padding: 24px;
+    }
+
+    .calc-card .formula {
+      background: var(--navy);
+      padding: 12px;
+      border-radius: 12px;
+      font-family: monospace;
+      font-size: 0.85rem;
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      margin: 10px 0;
+      color: var(--gray);
+    }
+
+    .calc-card input {
+      background: var(--navy);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 8px 12px;
+      border-radius: 30px;
+      color: var(--white);
+      width: 80px;
+      margin: 4px 4px 4px 0;
+    }
+
+    .calc-card .calc-result {
+      color: var(--orange);
+      font-weight: 600;
+      font-size: 1.2rem;
+      margin-left: 10px;
+    }
+
+    /* contact */
+    .contact-block {
+      background: var(--card-bg);
+      border-radius: 32px;
+      padding: 48px 40px;
+      border: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px 32px;
+      margin-top: 24px;
+    }
+
+    .contact-links a {
+      color: var(--gray);
+      font-weight: 500;
+      border-bottom: 1px solid transparent;
+      transition: 0.2s;
+    }
+
+    .contact-links a:hover {
+      color: var(--white);
+      border-color: var(--orange);
+    }
+
+    footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.03);
+      padding: 40px 0;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+      color: var(--gray);
+      font-size: 0.85rem;
+    }
+
+    /* modal */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(8px);
+      z-index: 9999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .modal-overlay.active {
+      display: flex;
+    }
+
+    .modal-box {
+      background: var(--dark-navy);
+      max-width: 600px;
+      width: 100%;
+      border: 1px solid var(--blue);
+      border-radius: 24px;
+      padding: 30px;
+    }
+
+    /* responsive */
+    @media (max-width:1024px) {
+      .hero-photo-panel {
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+        width: 100%;
+        max-width: 340px;
+        margin: 30px auto 0;
+      }
+
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 100px;
+      }
+
+      .hero-content {
+        max-width: 100%;
+      }
+
+      .hero p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-cta {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width:900px) {
+
+      .grid-2,
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .mobile-toggle {
+        display: block;
+      }
+
+      .navbar {
+        padding: 12px 20px;
+      }
+
+      .section-pad {
+        padding: 60px 0;
+      }
+
+      h2 {
+        font-size: 2.2rem;
+      }
+
+      .scroll-indicator {
+        display: none;
+      }
+    }
+
+    @media (max-width:600px) {
+      .hero h1 {
+        font-size: 2.4rem;
+      }
+
+      .hero-photo-panel {
+        max-width: 100%;
+        height: 260px;
+      }
+
+      .contact-block {
+        padding: 28px 20px;
+      }
+    }
+
+    /* reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* reduced motion */
+    @media (prefers-reduced-motion:reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">LOAI <span>H.</span></div>
+    <ul class="nav-links">
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#engineering">Engineering</a></li>
+      <li><a href="#pvsyst">PVsyst</a></li>
+      <li><a href="#evidence">Evidence</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#" class="nav-cv">CV</a></li>
+    </ul>
+    <button class="mobile-toggle" id="mobileToggle"><i class="fas fa-bars"></i></button>
+  </nav>
+
+  <!-- scroll indicator -->
+  <div class="scroll-indicator">
+    <div class="fill" id="scrollFill"></div>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-grid"></div>
+    <div class="hero-particles" id="particles"></div>
+    <div class="container" style="position:relative;z-index:2;width:100%;">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="btn" style="border-color:var(--blue);padding:4px 16px;font-size:0.6rem;">SOLAR PV /
+            ELECTRICAL</span>
+          <span class="status"><span class="status-dot"></span> OPEN TO OPPORTUNITIES</span>
+        </div>
+        <h1>I DESIGN THE SYSTEMS THAT TURN <span class="gold">SUNLIGHT</span> INTO POWER.</h1>
+        <p>Electrical Engineer specializing in Solar PV Design, PVsyst Simulation, Electrical Systems and Renewable
+          Energy Engineering.</p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-orange">EXPLORE PROJECTS →</a>
+          <a href="#" class="btn">DOWNLOAD CV</a>
+          <a href="#contact" class="secondary-link">LET'S CONNECT</a>
+        </div>
+        <div style="margin-top:20px;color:var(--gray);font-size:0.8rem;">Qena, Egypt</div>
+      </div>
+      <!-- photo panel -->
+      <!-- photo panel -->
+      <div class="hero-photo-panel" id="photoPanel" style="max-width: 320px; margin: 0 auto;">
+
+        <div class="photo-placeholder" style="
+    width: 100%; 
+    height: 380px; 
+    background-image: url('aaa.jpeg'); 
+    background-size: cover; 
+    background-position: 52% 40%; /* لضبط سنتر الصورة عليك مباشرة وخفض السماء */
+    background-repeat: no-repeat;
+    border-radius: 8px; /* يعطي حواف ناعمة واحترافية للكارت */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* ظل خفيف لإبراز الصورة */
+    background-color: #f0f0f0;">
+        </div>
+
+        <div class="photo-labels" style="display: flex; justify-content: space-between; margin-top: 12px; gap: 5px;">
+          <span style="flex: 1; text-align: center;">PV DESIGN</span>
+          <span style="flex: 1; text-align: center;">PVSYST</span>
+          <span style="flex: 1; text-align: center;">ELECTRICAL</span>
+        </div>
+      </div>
+
+      <!-- mini energy line -->
+      <div class="hero-energy">
+        <span>SUN</span><span class="line"></span><span>PV</span><span class="line orange"></span><span>DC</span><span
+          class="line"></span><span>INV</span><span class="line yellow"></span><span>AC</span><span
+          class="line"></span><span>GRID</span>
+      </div>
+  </section>
+
+  <!-- TICKER -->
+  <div class="ticker-wrap">
+    <div class="ticker">
+      <span><i class="fas fa-solar-panel"></i>SOLAR PV DESIGN</span>
+      <span><i class="fas fa-chart-line"></i>PVSYST</span>
+      <span><i class="fas fa-bolt"></i>ELECTRICAL DESIGN</span>
+      <span><i class="fas fa-drafting-compass"></i>AUTOCAD</span>
+      <span><i class="fas fa-arrows-alt-h"></i>STRING SIZING</span>
+      <span><i class="fas fa-exchange-alt"></i>INVERTER SELECTION</span>
+      <span><i class="fas fa-water"></i>SOLAR PUMPING</span>
+      <span><i class="fas fa-file-alt"></i>TECHNICAL DOCUMENTATION</span>
+      <span><i class="fas fa-tools"></i>TESTING & COMMISSIONING</span>
+      <!-- duplicate for seamless -->
+      <span><i class="fas fa-chart-line"></i>PVSYST</span>
+      <span><i class="fas fa-bolt"></i>ELECTRICAL DESIGN</span>
+      <span><i class="fas fa-drafting-compass"></i>AUTOCAD</span>
+      <span><i class="fas fa-arrows-alt-h"></i>STRING SIZING</span>
+      <span><i class="fas fa-exchange-alt"></i>INVERTER SELECTION</span>
+      <span><i class="fas fa-water"></i>SOLAR PUMPING</span>
+      <span><i class="fas fa-file-alt"></i>TECHNICAL DOCUMENTATION</span>
+      <span><i class="fas fa-tools"></i>TESTING & COMMISSIONING</span>
+    </div>
+  </div>
+
+  <!-- ENGINEER IDENTITY -->
+  <section class="section-pad" style="background:var(--dark-navy);" id="about">
+    <div class="container">
+      <div class="section-title reveal"><span class="section-label">Identity</span>
+        <h2>ELECTRICAL ENGINEER. <span class="gold">SOLAR SPECIALIST.</span></h2>
+        <p style="font-size:1.1rem;color:var(--gray);max-width:600px;margin-top:12px;">I combine electrical engineering
+          principles with Solar PV design, simulation and technical documentation to develop practical renewable-energy
+          systems.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card reveal">
+          <div class="icon"><i class="fas fa-bolt"></i></div>
+          <h3>ELECTRICAL</h3>
+          <p class="text-muted">Electrical Design · Protection · Cable Sizing · SLD · Earthing</p>
+          <div class="card-tags"><span>SLD</span><span>Protection</span></div>
+        </div>
+        <div class="card reveal">
+          <div class="icon"><i class="fas fa-sun"></i></div>
+          <h3>SOLAR PV</h3>
+          <p class="text-muted">PV Design · String Sizing · Inverter · PVsyst · Energy Yield</p>
+          <div class="card-tags"><span>PVsyst</span><span>String</span></div>
+        </div>
+        <div class="card reveal">
+          <div class="icon"><i class="fas fa-microchip"></i></div>
+          <h3>DIGITAL</h3>
+          <p class="text-muted">IoT · Data Analysis · Monitoring · Dashboards</p>
+          <div class="card-tags"><span>IoT</span><span>Python</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT I ENGINEER (6 modules) -->
+  <section class="section-pad" id="engineering">
+    <div class="container">
+      <div class="section-title reveal"><span class="section-label">Capabilities</span>
+        <h2>WHAT I <span class="gold">ENGINEER</span></h2>
+      </div>
+      <div class="grid-3">
+        <div class="card reveal"><i class="fas fa-solar-panel" style="color:var(--orange);font-size:1.8rem;"></i>
+          <h3>PV SYSTEM DESIGN</h3>
+          <p class="text-muted">On-Grid · Off-Grid · Rooftop · Utility</p>
+        </div>
+        <div class="card reveal"><i class="fas fa-chart-line" style="color:var(--blue);font-size:1.8rem;"></i>
+          <h3>PVSYST</h3>
+          <p class="text-muted">Simulation · Yield · Loss · PR</p>
+        </div>
+        <div class="card reveal"><i class="fas fa-bolt" style="color:var(--yellow);font-size:1.8rem;"></i>
+          <h3>ELECTRICAL DESIGN</h3>
+          <p class="text-muted">Cable · Voltage Drop · Protection</p>
+        </div>
+        <div class="card reveal"><i class="fas fa-file-alt" style="color:var(--orange);font-size:1.8rem;"></i>
+          <h3>TECHNICAL DOCS</h3>
+          <p class="text-muted">SLD · Layouts · BOQ · Offers</p>
+        </div>
+        <div class="card reveal"><i class="fas fa-water" style="color:var(--blue);font-size:1.8rem;"></i>
+          <h3>SOLAR PUMPING</h3>
+          <p class="text-muted">Hydraulics · Pump · PV Sizing</p>
+        </div>
+        <div class="card reveal"><i class="fas fa-database" style="color:var(--yellow);font-size:1.8rem;"></i>
+          <h3>DIGITAL ENERGY</h3>
+          <p class="text-muted">IoT · Monitoring · Dashboards</p>
+        </div>
+      </div>
+  </section>
+
+  <!-- PROJECTS with filter -->
+  <section class="section-pad" style="background:var(--dark-navy);" id="projects">
+    <div class="container">
+      <div class="section-title reveal"><span class="section-label">Portfolio</span>
+        <h2>ENGINEERING IN <span class="gold">ACTION.</span></h2>
+        <p class="text-muted">Real engineering thinking. Technical studies. Design evidence.</p>
+      </div>
+      <div class="filter-bar" id="filterBar">
+        <button class="filter-btn active" data-filter="all">ALL</button>
+        <button class="filter-btn" data-filter="pv">PV DESIGN</button>
+        <button class="filter-btn" data-filter="pvsyst">PVSYST</button>
+        <button class="filter-btn" data-filter="electrical">ELECTRICAL</button>
+        <button class="filter-btn" data-filter="utility">UTILITY</button>
+        <button class="filter-btn" data-filter="pumping">PUMPING</button>
+      </div>
+      <div class="grid-2" id="projectGrid">
+        <div class="project-card" data-cat="pv">
+          <div class="img-placeholder"><i class="fas fa-draw-polygon"></i> PV Layout</div>
+          <div class="project-info"><span class="cat">ROOFTOP / ON-GRID</span>
+            <h3>34 kWp ON-GRID PV</h3>
+            <div class="project-tags"><span>PV DESIGN</span><span>STRING</span><span>INVERTER</span></div><a href="#"
+              class="project-cta">VIEW CASE →</a>
+          </div>
+        </div>
+        <div class="project-card" data-cat="pvsyst">
+          <div class="img-placeholder"><i class="fas fa-chart-pie"></i> PVsyst Dashboard</div>
+          <div class="project-info"><span class="cat">PV SYSTEM ANALYSIS</span>
+            <h3>PVSYST SIMULATION</h3>
+            <div class="project-tags"><span>PVSYST</span><span>YIELD</span><span>LOSS</span></div><a href="#"
+              class="project-cta">VIEW STUDY →</a>
+          </div>
+        </div>
+        <div class="project-card" data-cat="pv">
+          <div class="img-placeholder"><i class="fas fa-building"></i> Rooftop Layout</div>
+          <div class="project-info"><span class="cat">SOLAR PV DESIGN</span>
+            <h3>ROOFTOP PV DESIGN</h3>
+            <div class="project-tags"><span>AUTOCAD</span><span>ORIENTATION</span><span>SLD</span></div><a href="#"
+              class="project-cta">VIEW CASE →</a>
+          </div>
+        </div>
+        <div class="project-card" data-cat="utility">
+          <div class="img-placeholder"><i class="fas fa-tachometer-alt"></i> SCADA</div>
+          <div class="project-info"><span class="cat">UTILITY-SCALE</span>
+            <h3>UTILITY-SCALE PV STUDY</h3>
+            <div class="project-tags"><span>PV BLOCKS</span><span>DC/AC</span><span>MV</span></div><a href="#"
+              class="project-cta">VIEW STUDY →</a>
+          </div>
+        </div>
+        <div class="project-card" data-cat="pumping">
+          <div class="img-placeholder"><i class="fas fa-water"></i> Pump System</div>
+          <div class="project-info"><span class="cat">SOLAR PUMPING</span>
+            <h3>SOLAR WATER PUMPING</h3>
+            <div class="project-tags"><span>HYDRAULICS</span><span>PUMP</span><span>CONTROLLER</span></div><a href="#"
+              class="project-cta">VIEW CASE →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORKFLOW -->
+  <section class="section-pad">
+    <div class="container">
+      <div class="section-title reveal"><span class="section-label">Process</span>
+        <h2>FROM SITE TO <span class="gold">ENERGY</span></h2>
+      </div>
+      <div class="workflow-grid reveal">
+        <span class="wf-node"><span class="num">01</span>SITE</span><span class="wf-node"><span
+            class="num">02</span>LOAD</span>
+        <span class="wf-node"><span class="num">03</span>PV</span><span class="wf-node"><span
+            class="num">04</span>STRING</span>
+        <span class="wf-node"><span class="num">05</span>INVERTER</span><span class="wf-node"><span
+            class="num">06</span>MPPT</span>
+        <span class="wf-node"><span class="num">07</span>ELECTRICAL</span><span class="wf-node"><span
+            class="num">08</span>PVSYST</span>
+        <span class="wf-node"><span class="num">09</span>SLD</span><span class="wf-node"><span
+            class="num">10</span>BOQ</span>
+        <span class="wf-node"><span class="num">11</span>COMMISSION</span>
+      </div>
+  </section>
+
+  <!-- PVSYST SECTION -->
+  <section class="section-pad" style="background:var(--dark-navy);" id="pvsyst">
+    <div class="container">
+      <div class="section-title reveal"><span class="section-label">PVsyst</span>
+        <h2>SIMULATE BEFORE <span class="gold">YOU BUILD.</span></h2>
+      </div>
+      <div class="grid-3 reveal">
+        <div class="card"><i class="fas fa-sun" style="color:var(--yellow);font-size:1.8rem;"></i>
+          <h3>Energy Yield</h3>
+          <p class="text-muted">[VERIFIED DATA]</p>
+        </div>
+        <div class="card"><i class="fas fa-chart-bar" style="color:var(--orange);font-size:1.8rem;"></i>
+          <h3>Specific Production</h3>
+          <p class="text-muted">[VERIFIED DATA]</p>
+        </div>
+        <div class="card"><i class="fas fa-percent" style="color:var(--blue);font-size:1.8rem;"></i>
+          <h3>Performance Ratio</h3>
+          <p class="text-muted">[VERIFIED DATA]</p>
+        </div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:20px;" class="reveal">
+        <span class="wf-node">METEO</span><span class="wf-node">ORIENTATION</span><span class="wf-node">SYSTEM</span>
+        <span class="wf-node">MODULE</span><span class="wf-node">INVERTER</span><span class="wf-node">STRINGS</span>
+        <span class="wf-node">SHADING</span><span class="wf-node">SIMULATION</span><span class="wf-node"
+          style="border-color:var(--orange);">ENERGY</span>
+      </div>
+  </section>
+
+  <!-- EVIDENCE -->
+  <section class="section-pad" id="evidence">
+    <div class="container">
+      <div class="section-title reveal"><span class="section-label">Evidence</span>
+        <h2>SHOW THE <span class="gold">ENGINEERING.</span></h2>
+      </div>
+      <div class="evidence-grid reveal">
+        <div class="evidence-item"><i class="fas fa-file-pdf"></i>
+          <div>PVsyst Report</div>
+          <div style="font-size:0.7rem;color:var(--blue);">VIEW</div>
+        </div>
+        <div class="evidence-item"><i class="fas fa-draw-polygon"></i>
+          <div>AutoCAD Layout</div>
+          <div style="font-size:0.7rem;color:var(--blue);">VIEW</div>
+        </div>
+        <div class="evidence-item"><i class="fas fa-project-diagram"></i>
+          <div>SLD</div>
+          <div style="font-size:0.7rem;color:var(--blue);">VIEW</div>
+        </div>
+        <div class="evidence-item"><i class="fas fa-calculator"></i>
+          <div>Calculations</div>
+          <div style="font-size:0.7rem;color:var(--blue);">VIEW</div>
+        </div>
+        <div class="evidence-item"><i class="fas fa-table"></i>
+          <div>BOQ</div>
+          <div style="font-size:0.7rem;color:var(--blue);">VIEW</div>
+        </div>
+        <div class="evidence-item"><i class="fas fa-clipboard-check"></i>
+          <div>Commissioning</div>
+          <div style="font-size:0.7rem;color:var(--blue);">VIEW</div>
+        </div>
+      </div>
+  </section>
+
+  <!-- CALCULATORS -->
+  <section class="section-pad" style="background:var(--dark-navy);" id="tools">
+    <div class="container">
+      <div class="section-title reveal"><span class="section-label">Tools</span>
+        <h2>INTERACTIVE <span class="gold">CALCULATORS</span></h2>
+      </div>
+      <div class="grid-2 reveal">
+        <div class="calc-card">
+          <h4>PV Capacity</h4>
+          <div class="formula">Modules × Module Power = PV Capacity</div><input type="number" id="modCount" value="20"
+            style="width:70px;"> <input type="number" id="modPower" value="550" style="width:70px;"> <button class="btn"
+            style="padding:4px 18px;font-size:0.8rem;" id="calcPv">=</button> <span class="calc-result"
+            id="pvResult">11000 W</span>
+        </div>
+        <div class="calc-card">
+          <h4>String Voltage</h4>
+          <div class="formula">Modules × Voc = String Voc</div><input type="number" id="strMod" value="12"
+            style="width:70px;"> <input type="number" id="vocVal" value="45.6" style="width:70px;"> <button class="btn"
+            style="padding:4px 18px;font-size:0.8rem;" id="calcVoc">=</button> <span class="calc-result"
+            id="vocResult">547.2 V</span>
+        </div>
+      </div>
+      <div style="margin-top:12px;font-size:0.7rem;color:var(--gray);" class="reveal">Engineering reference only —
+        verify final designs using applicable standards.</div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section-pad" id="contact">
+    <div class="container">
+      <div class="contact-block reveal">
+        <h2 style="font-size:2.4rem;">LET'S BUILD <span class="gold">BETTER ENERGY</span> SYSTEMS.</h2>
+        <p style="color:var(--gray);max-width:600px;margin:16px 0;">Open to opportunities in Solar PV Engineering,
+          Renewable Energy, Technical Office, Site Engineering, Testing & Commissioning, O&M, Solar Pumping and Solar
+          Monitoring.</p>
+        <div class="contact-links">
+          <a href="#"><i class="fas fa-envelope"></i> EMAIL</a>
+          <a href="#"><i class="fab fa-linkedin"></i> LINKEDIN</a>
+          <a href="#"><i class="fab fa-github"></i> GITHUB</a>
+          <a href="#"><i class="fab fa-whatsapp"></i> WHATSAPP</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="container">
+    <div><strong>LOAI HAMDOUN</strong><br>Electrical Engineer | Solar PV<br>Qena, Egypt</div>
+    <div style="display:flex;gap:20px;"><a href="#">LinkedIn</a><a href="#">GitHub</a><a href="#">Email</a></div>
+  </footer>
+
+  <!-- MODAL -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-box">
+      <h3>📄 Technical Document</h3>
+      <p class="text-muted">Preview placeholder. Replace with actual evidence.</p><button class="btn"
+        style="margin-top:20px;" id="closeModal">Close</button>
+    </div>
+  </div>
+
+  <script>
+    // ---------- JS ----------
+    // particles
+    (function () {
+      const c = document.getElementById('particles');
+      for (let i = 0; i < 25; i++) { const p = document.createElement('div'); p.className = 'particle'; p.style.left = Math.random() * 100 + '%'; p.style.top = Math.random() * 100 + '%'; p.style.animationDelay = (Math.random() * 20) + 's'; p.style.animationDuration = (15 + Math.random() * 20) + 's'; p.style.width = (2 + Math.random() * 4) + 'px'; p.style.height = p.style.width; c.appendChild(p); }
+    })();
+
+    // navbar scroll
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); });
+
+    // scroll indicator
+    const fill = document.getElementById('scrollFill');
+    window.addEventListener('scroll', () => { const h = document.documentElement.scrollHeight - window.innerHeight; fill.style.height = (window.scrollY / h * 100) + '%'; });
+
+    // reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const obs = new IntersectionObserver((e) => e.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); }), { threshold: 0.15 });
+    reveals.forEach(el => obs.observe(el));
+
+    // calculators
+    document.getElementById('calcPv').addEventListener('click', function () { const m = parseFloat(document.getElementById('modCount').value) || 0; const p = parseFloat(document.getElementById('modPower').value) || 0; document.getElementById('pvResult').textContent = (m * p) + ' W'; });
+    document.getElementById('calcVoc').addEventListener('click', function () { const m = parseFloat(document.getElementById('strMod').value) || 0; const v = parseFloat(document.getElementById('vocVal').value) || 0; document.getElementById('vocResult').textContent = (m * v).toFixed(1) + ' V'; });
+
+    // modal evidence
+    const modal = document.getElementById('modalOverlay');
+    document.querySelectorAll('.evidence-item').forEach(el => el.addEventListener('click', () => modal.classList.add('active')));
+    document.getElementById('closeModal').addEventListener('click', () => modal.classList.remove('active'));
+    modal.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
+
+    // project filter
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const projects = document.querySelectorAll('.project-card');
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', function () {
+        filterBtns.forEach(b => b.classList.remove('active')); this.classList.add('active');
+        const f = this.dataset.filter;
+        projects.forEach(p => {
+          if (f === 'all' || p.dataset.cat === f) p.style.display = 'block'; else p.style.display = 'none';
+        });
+      });
+    });
+
+    // mobile toggle
+    const toggle = document.getElementById('mobileToggle');
+    toggle.addEventListener('click', function () {
+      const links = document.querySelector('.nav-links');
+      if (links.style.display === 'flex') { links.style.display = 'none'; }
+      else { links.style.display = 'flex'; links.style.flexDirection = 'column'; links.style.position = 'absolute'; links.style.top = '70px'; links.style.right = '20px'; links.style.background = '#07111F'; links.style.padding = '24px'; links.style.borderRadius = '20px'; links.style.border = '1px solid rgba(255,255,255,0.04)'; links.style.gap = '16px'; }
+    });
+    window.addEventListener('resize', () => { if (window.innerWidth > 900) { const l = document.querySelector('.nav-links'); l.style.display = 'flex'; l.style.flexDirection = 'row'; l.style.position = 'static'; l.style.background = 'transparent'; l.style.padding = '0'; l.style.border = 'none'; } });
+
+    console.log('⚡ Loai H. · Solar PV Engineering Portfolio');
+  </script>
+</body>
+
+</html>
