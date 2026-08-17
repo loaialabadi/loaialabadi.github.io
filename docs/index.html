@@ -4,21 +4,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Loai H. · Electrical Engineer · Solar PV</title>
+  <title>Loai Hamdoun · Electrical Engineer · Solar PV</title>
   <meta name="description"
-    content="Electrical Engineer specializing in Solar PV Design, PVsyst, Electrical Systems and Renewable Energy Engineering." />
-  <meta property="og:title" content="Loai H. · Electrical Engineer · Solar PV" />
-  <meta property="og:description" content="Solar PV Design · PVsyst · Electrical Systems · Renewable Energy" />
-  <meta name="theme-color" content="#07111F" />
-  <link rel="icon" href="#" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    content="Electrical Engineer specializing in Solar PV design, site execution, testing & commissioning. Utility-scale experience." />
+  <meta name="theme-color" content="#050B14" />
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <style>
-    /* ----- CSS reset & variables ----- */
     * {
       margin: 0;
       padding: 0;
@@ -26,17 +20,15 @@
     }
 
     :root {
-      --navy: #07111F;
-      --dark-navy: #0B1728;
-      --card-bg: #101F33;
-      --blue: #00B8FF;
-      --orange: #FF9D00;
-      --yellow: #FFD166;
+      --navy: #050B14;
+      --dark-blue: #081B2E;
+      --blue: #00AEEF;
+      --solar: #FF9D00;
+      --gold: #FFD166;
       --white: #F5F7FA;
-      --gray: #8FA3B8;
+      --gray: #8FA3B5;
       --font: 'Inter', sans-serif;
       --max-w: 1240px;
-      --cursor-ring: rgba(0, 184, 255, 0.2);
     }
 
     html {
@@ -47,14 +39,18 @@
       background: var(--navy);
       color: var(--white);
       font-family: var(--font);
-      line-height: 1.5;
+      line-height: 1.6;
       overflow-x: hidden;
-      cursor: default;
     }
 
     a {
       color: var(--blue);
       text-decoration: none;
+      transition: 0.3s;
+    }
+
+    a:hover {
+      color: var(--solar);
     }
 
     .container {
@@ -67,20 +63,20 @@
       padding: 90px 0;
     }
 
-    .gold {
-      color: var(--orange);
+    .text-muted {
+      color: var(--gray);
     }
 
     .blue {
       color: var(--blue);
     }
 
-    .yellow {
-      color: var(--yellow);
+    .solar {
+      color: var(--solar);
     }
 
-    .text-muted {
-      color: var(--gray);
+    .gold {
+      color: var(--gold);
     }
 
     .section-label {
@@ -89,20 +85,20 @@
       letter-spacing: 4px;
       text-transform: uppercase;
       color: var(--blue);
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
 
     h2 {
       font-size: 2.8rem;
-      font-weight: 700;
+      font-weight: 800;
       letter-spacing: -0.02em;
       line-height: 1.1;
     }
 
     h3 {
       font-size: 1.3rem;
-      font-weight: 600;
-      margin-bottom: 8px;
+      font-weight: 700;
+      margin-bottom: 6px;
     }
 
     .btn {
@@ -111,44 +107,33 @@
       border: 1.5px solid var(--blue);
       border-radius: 60px;
       color: var(--white);
-      font-weight: 600;
+      font-weight: 700;
       font-size: 0.85rem;
       letter-spacing: 1px;
       text-transform: uppercase;
-      transition: 0.25s;
+      transition: 0.3s;
       background: transparent;
       cursor: pointer;
-      position: relative;
     }
 
     .btn:hover {
       background: var(--blue);
       color: var(--navy);
-      box-shadow: 0 0 30px rgba(0, 184, 255, 0.2);
+      box-shadow: 0 0 40px rgba(0, 174, 239, 0.15);
     }
 
-    .btn-orange {
-      border-color: var(--orange);
-      color: var(--orange);
+    .btn-solar {
+      border-color: var(--solar);
+      color: var(--solar);
     }
 
-    .btn-orange:hover {
-      background: var(--orange);
+    .btn-solar:hover {
+      background: var(--solar);
       color: var(--navy);
-      box-shadow: 0 0 30px rgba(255, 157, 0, 0.2);
+      box-shadow: 0 0 40px rgba(255, 157, 0, 0.15);
     }
 
-    .btn-yellow {
-      border-color: var(--yellow);
-      color: var(--yellow);
-    }
-
-    .btn-yellow:hover {
-      background: var(--yellow);
-      color: var(--navy);
-    }
-
-    /* ----- navbar ----- */
+    /* NAVBAR */
     .navbar {
       position: fixed;
       top: 0;
@@ -159,25 +144,26 @@
       align-items: center;
       justify-content: space-between;
       z-index: 999;
-      background: rgba(7, 17, 31, 0.6);
+      background: rgba(5, 11, 20, 0.7);
       backdrop-filter: blur(14px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.03);
       transition: 0.3s;
     }
 
     .navbar.scrolled {
       padding: 10px 36px;
-      background: rgba(7, 17, 31, 0.92);
+      background: rgba(5, 11, 20, 0.95);
     }
 
     .nav-logo {
-      font-weight: 700;
+      font-weight: 800;
       font-size: 1.2rem;
       color: var(--white);
+      letter-spacing: 1px;
     }
 
     .nav-logo span {
-      color: var(--orange);
+      color: var(--blue);
     }
 
     .nav-links {
@@ -189,10 +175,9 @@
 
     .nav-links a {
       color: var(--gray);
-      font-size: 0.8rem;
-      font-weight: 500;
+      font-size: 0.85rem;
+      font-weight: 600;
       letter-spacing: 0.5px;
-      transition: 0.2s;
     }
 
     .nav-links a:hover {
@@ -204,7 +189,7 @@
       padding: 6px 20px;
       border-radius: 40px;
       color: var(--blue) !important;
-      font-weight: 600;
+      font-weight: 700;
     }
 
     .nav-cv:hover {
@@ -221,296 +206,154 @@
       cursor: pointer;
     }
 
-    /* ----- scroll indicator ----- */
-    .scroll-indicator {
-      position: fixed;
-      right: 30px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 3px;
-      height: 160px;
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 6px;
-      z-index: 99;
-      overflow: hidden;
-    }
-
-    .scroll-indicator .fill {
-      width: 100%;
-      height: 0%;
-      background: linear-gradient(to bottom, var(--blue), var(--orange), var(--yellow));
-      border-radius: 6px;
-      transition: height 0.1s;
-    }
-
-    /* ----- hero ----- */
+    /* HERO */
     .hero {
       min-height: 100vh;
       display: flex;
       align-items: center;
       position: relative;
       overflow: hidden;
-      background: radial-gradient(circle at 20% 30%, #0f2a44, var(--navy) 80%);
+      background: radial-gradient(ellipse at 30% 40%, #0a1f33, var(--navy) 80%);
     }
 
     .hero-grid {
       position: absolute;
       inset: 0;
-      background-image: linear-gradient(rgba(0, 184, 255, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 184, 255, 0.03) 1px, transparent 1px);
-      background-size: 50px 50px;
+      background-image: linear-gradient(rgba(0, 174, 239, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 174, 239, 0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
       pointer-events: none;
     }
 
-    .hero-particles {
-      position: absolute;
-      inset: 0;
-      overflow: hidden;
-      pointer-events: none;
-    }
-
-    .particle {
-      position: absolute;
-      width: 3px;
-      height: 3px;
-      background: var(--blue);
-      border-radius: 50%;
-      opacity: 0.2;
-      animation: floatP 22s infinite linear;
-    }
-
-    @keyframes floatP {
-      0% {
-        transform: translateY(0) translateX(0) scale(0.8);
-        opacity: 0.1;
-      }
-
-      50% {
-        opacity: 0.6;
-        transform: translateY(-160px) translateX(50px) scale(1.4);
-      }
-
-      100% {
-        transform: translateY(-320px) translateX(100px) scale(0.6);
-        opacity: 0;
-      }
+    .hero .container {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      gap: 60px;
+      flex-wrap: wrap;
     }
 
     .hero-content {
-      position: relative;
-      z-index: 2;
-      max-width: 700px;
-      padding: 40px 0;
+      flex: 1 1 50%;
     }
 
-    .hero-badge {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      align-items: center;
-      margin-bottom: 20px;
+    .hero-content .label {
+      color: var(--blue);
+      font-size: 0.7rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
     }
 
-    .hero-badge .status {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.8rem;
-      color: var(--gray);
-    }
-
-    .status-dot {
-      width: 8px;
-      height: 8px;
-      background: #4caf50;
-      border-radius: 50%;
-      display: inline-block;
-      animation: pulseDot 2s infinite;
-    }
-
-    @keyframes pulseDot {
-      0% {
-        opacity: 0.5;
-      }
-
-      50% {
-        opacity: 1;
-      }
-
-      100% {
-        opacity: 0.5;
-      }
-    }
-
-    .hero h1 {
+    .hero-content h1 {
       font-size: 4rem;
       font-weight: 800;
       letter-spacing: -0.03em;
       line-height: 1.05;
-      margin: 10px 0 18px;
+      margin: 4px 0 2px;
     }
 
-    .hero h1 .gold {
-      color: var(--orange);
-    }
-
-    .hero p {
-      font-size: 1.1rem;
+    .hero-content .subtitle {
+      font-size: 1.2rem;
       color: var(--gray);
-      max-width: 520px;
-      margin-bottom: 28px;
+      font-weight: 400;
+    }
+
+    .hero-content .tagline {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--solar);
+      margin: 6px 0 14px;
+    }
+
+    .hero-content .summary {
+      margin: 10px 0 24px;
+      color: var(--gray);
+      max-width: 540px;
     }
 
     .hero-cta {
       display: flex;
+      gap: 14px;
       flex-wrap: wrap;
-      gap: 16px;
       align-items: center;
     }
 
-    .hero-cta .secondary-link {
-      color: var(--gray);
-      font-weight: 500;
-      border-bottom: 1px solid transparent;
-      transition: 0.2s;
+    /* PHOTO FRAME */
+    .hero-photo {
+      flex: 1 1 280px;
+      max-width: 360px;
+      width: 100%;
+      position: relative;
     }
 
-    .hero-cta .secondary-link:hover {
-      color: var(--white);
-      border-color: var(--orange);
-    }
-
-    /* photo panel */
-    .hero-photo-panel {
-      position: absolute;
-      right: 5%;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 320px;
-      height: 340px;
-      background: var(--card-bg);
-      border-radius: 32px;
-      border: 1px solid rgba(0, 184, 255, 0.2);
-      box-shadow: 0 0 60px rgba(0, 184, 255, 0.05);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      backdrop-filter: blur(4px);
-      overflow: hidden;
-      transition: 0.3s;
+    .hero-photo-frame {
+      width: 100%;
+      height: 420px;
+      border-radius: 24px;
+      border: 1px solid rgba(0, 174, 239, 0.15);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      background-image: url('aaa.jpeg');
+      background-size: cover;
+      background-position: 52% 38%;
+      background-repeat: no-repeat;
+      display: block;
+      background-color: var(--dark-blue);
+      position: relative;
       z-index: 2;
     }
 
-    .hero-photo-panel .photo-placeholder {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(135deg, #0f2a44, #07111F);
-      color: var(--gray);
-      font-size: 0.8rem;
-      text-align: center;
-      padding: 20px;
-    }
-
-    .hero-photo-panel .photo-placeholder i {
-      font-size: 3rem;
-      color: var(--orange);
-      opacity: 0.4;
-      margin-bottom: 12px;
-    }
-
-    .photo-labels {
+    .hero-photo .ring {
       position: absolute;
-      top: -10px;
-      right: -10px;
-      display: flex;
-      gap: 6px;
-      flex-wrap: wrap;
-    }
-
-    .photo-labels span {
-      background: rgba(0, 184, 255, 0.1);
-      border: 1px solid rgba(0, 184, 255, 0.2);
-      border-radius: 30px;
-      padding: 2px 12px;
-      font-size: 0.6rem;
-      color: var(--blue);
-      letter-spacing: 1px;
-    }
-
-    /* hero energy svg (minimal) */
-    .hero-energy {
-      position: absolute;
-      left: 5%;
-      bottom: 12%;
+      inset: -6px;
+      border-radius: 28px;
+      border: 1px solid rgba(0, 174, 239, 0.08);
+      pointer-events: none;
+      animation: ringPulse 4s ease-in-out infinite;
       z-index: 1;
-      opacity: 0.3;
-      display: flex;
-      gap: 4px;
-      align-items: center;
-      font-size: 0.6rem;
-      color: var(--gray);
     }
 
-    .hero-energy .line {
-      width: 30px;
-      height: 1px;
-      background: var(--blue);
-    }
+    @keyframes ringPulse {
 
-    .hero-energy .line.orange {
-      background: var(--orange);
-    }
-
-    .hero-energy .line.yellow {
-      background: var(--yellow);
-    }
-
-    /* ----- ticker ----- */
-    .ticker-wrap {
-      background: var(--dark-navy);
-      border-top: 1px solid rgba(255, 255, 255, 0.03);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.03);
-      overflow: hidden;
-      padding: 14px 0;
-    }
-
-    .ticker {
-      display: flex;
-      gap: 40px;
-      animation: tickerScroll 28s linear infinite;
-      white-space: nowrap;
-    }
-
-    .ticker:hover {
-      animation-play-state: paused;
-    }
-
-    .ticker span {
-      color: var(--gray);
-      font-weight: 400;
-      letter-spacing: 1px;
-      font-size: 0.85rem;
-    }
-
-    .ticker span i {
-      color: var(--blue);
-      margin-right: 6px;
-    }
-
-    @keyframes tickerScroll {
-      0% {
-        transform: translateX(0);
-      }
-
+      0%,
       100% {
-        transform: translateX(-50%);
+        opacity: 0.3;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 0.8;
+        transform: scale(1.02);
       }
     }
 
-    /* cards */
+    .hero-photo .solar-dot {
+      position: absolute;
+      bottom: 12px;
+      right: 12px;
+      width: 10px;
+      height: 10px;
+      background: var(--solar);
+      border-radius: 50%;
+      box-shadow: 0 0 30px rgba(255, 157, 0, 0.6);
+      animation: dotPulse 2s ease-in-out infinite;
+      z-index: 3;
+    }
+
+    @keyframes dotPulse {
+
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: 0.8;
+      }
+
+      50% {
+        transform: scale(1.4);
+        opacity: 1;
+      }
+    }
+
+    /* CARDS */
     .grid-2 {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -525,238 +368,144 @@
 
     .card {
       background: rgba(255, 255, 255, 0.02);
-      border: 1px solid rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.04);
       border-radius: 24px;
       padding: 28px 24px;
+      transition: 0.4s;
       backdrop-filter: blur(4px);
-      transition: 0.3s;
-      cursor: default;
     }
 
     .card:hover {
-      border-color: var(--blue);
-      transform: translateY(-4px);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      border-color: rgba(0, 174, 239, 0.25);
+      transform: translateY(-6px);
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
     }
 
     .card .icon {
-      color: var(--orange);
-      font-size: 1.8rem;
+      color: var(--blue);
+      font-size: 2rem;
       margin-bottom: 12px;
     }
 
     .card-tags {
       display: flex;
       flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 10px;
-    }
-
-    .card-tags span {
-      background: rgba(0, 184, 255, 0.06);
-      border: 1px solid rgba(0, 184, 255, 0.08);
-      border-radius: 30px;
-      padding: 2px 14px;
-      font-size: 0.7rem;
-      color: var(--gray);
-    }
-
-    /* project cards */
-    .project-card {
-      background: var(--card-bg);
-      border-radius: 24px;
-      overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.04);
-      transition: 0.3s;
-      cursor: pointer;
-    }
-
-    .project-card:hover {
-      border-color: var(--orange);
-      transform: scale(1.01);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-    }
-
-    .project-card .img-placeholder {
-      height: 200px;
-      background: linear-gradient(135deg, #0f2a44, #07111F);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--gray);
-      font-size: 0.8rem;
-    }
-
-    .project-card .img-placeholder i {
-      font-size: 2.4rem;
-      opacity: 0.3;
-      margin-right: 12px;
-    }
-
-    .project-info {
-      padding: 22px;
-    }
-
-    .project-info .cat {
-      color: var(--blue);
-      font-size: 0.65rem;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-    }
-
-    .project-info h3 {
-      font-size: 1.2rem;
-      margin: 4px 0;
-    }
-
-    .project-tags {
-      display: flex;
-      flex-wrap: wrap;
       gap: 4px;
-      margin: 10px 0;
-    }
-
-    .project-tags span {
-      background: rgba(255, 255, 255, 0.04);
-      border-radius: 30px;
-      padding: 2px 12px;
-      font-size: 0.65rem;
-      color: var(--gray);
-    }
-
-    .project-cta {
-      color: var(--orange);
-      font-weight: 600;
-      display: inline-block;
       margin-top: 8px;
     }
 
-    /* filter */
-    .filter-bar {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-bottom: 32px;
-    }
-
-    .filter-btn {
-      background: transparent;
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      border-radius: 40px;
-      padding: 6px 20px;
+    .card-tags span {
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 30px;
+      padding: 2px 14px;
+      font-size: 0.65rem;
       color: var(--gray);
-      font-size: 0.75rem;
-      cursor: pointer;
-      transition: 0.2s;
+      border: 1px solid rgba(255, 255, 255, 0.04);
     }
 
-    .filter-btn.active {
-      border-color: var(--orange);
-      color: var(--white);
-      background: rgba(255, 157, 0, 0.08);
-    }
-
-    .filter-btn:hover {
-      border-color: var(--blue);
-    }
-
-    /* workflow */
-    .workflow-grid {
+    /* WORKFLOW */
+    .wf-grid {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px 18px;
+      gap: 10px 16px;
       justify-content: center;
     }
 
     .wf-node {
       background: rgba(255, 255, 255, 0.02);
-      border: 1px solid rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.04);
       border-radius: 60px;
-      padding: 10px 26px;
-      font-size: 0.8rem;
-      font-weight: 500;
-      transition: 0.2s;
+      padding: 10px 24px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: 0.3s;
       cursor: default;
+    }
+
+    .wf-node:hover {
+      border-color: var(--blue);
+      background: rgba(0, 174, 239, 0.05);
+      transform: translateY(-2px);
     }
 
     .wf-node .num {
       color: var(--blue);
-      margin-right: 8px;
+      margin-right: 6px;
     }
 
-    .wf-node:hover {
-      border-color: var(--orange);
-      background: rgba(255, 157, 0, 0.04);
+    /* TIMELINE */
+    .timeline {
+      position: relative;
+      padding-left: 28px;
+      border-left: 2px solid var(--blue);
     }
 
-    /* evidence */
+    .timeline-item {
+      margin-bottom: 32px;
+      position: relative;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -36px;
+      top: 4px;
+      width: 12px;
+      height: 12px;
+      background: var(--blue);
+      border-radius: 50%;
+      border: 2px solid var(--navy);
+    }
+
+    .timeline-item .date {
+      color: var(--blue);
+      font-weight: 600;
+      font-size: 0.8rem;
+    }
+
+    .timeline-item .highlight {
+      color: var(--solar);
+      font-weight: 700;
+    }
+
+    .timeline-item .role {
+      font-weight: 700;
+    }
+
+    /* EVIDENCE */
     .evidence-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-      gap: 18px;
+      gap: 16px;
     }
 
     .evidence-item {
-      background: var(--card-bg);
+      background: rgba(255, 255, 255, 0.02);
       border: 1px solid rgba(255, 255, 255, 0.04);
       border-radius: 16px;
       padding: 20px 12px;
       text-align: center;
-      transition: 0.2s;
+      transition: 0.3s;
       cursor: pointer;
     }
 
     .evidence-item:hover {
       border-color: var(--blue);
+      transform: translateY(-4px);
     }
 
     .evidence-item i {
-      font-size: 2rem;
-      color: var(--orange);
+      font-size: 1.8rem;
+      color: var(--blue);
       opacity: 0.5;
+      margin-bottom: 6px;
     }
 
-    /* calculators */
-    .calc-card {
-      background: rgba(255, 255, 255, 0.02);
-      border: 1px solid rgba(255, 255, 255, 0.04);
-      border-radius: 20px;
-      padding: 24px;
-    }
-
-    .calc-card .formula {
-      background: var(--navy);
-      padding: 12px;
-      border-radius: 12px;
-      font-family: monospace;
-      font-size: 0.85rem;
-      border: 1px solid rgba(255, 255, 255, 0.04);
-      margin: 10px 0;
-      color: var(--gray);
-    }
-
-    .calc-card input {
-      background: var(--navy);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      padding: 8px 12px;
-      border-radius: 30px;
-      color: var(--white);
-      width: 80px;
-      margin: 4px 4px 4px 0;
-    }
-
-    .calc-card .calc-result {
-      color: var(--orange);
-      font-weight: 600;
-      font-size: 1.2rem;
-      margin-left: 10px;
-    }
-
-    /* contact */
+    /* CONTACT */
     .contact-block {
-      background: var(--card-bg);
+      background: var(--dark-blue);
       border-radius: 32px;
-      padding: 48px 40px;
+      padding: 50px 44px;
       border: 1px solid rgba(255, 255, 255, 0.04);
     }
 
@@ -764,19 +513,18 @@
       display: flex;
       flex-wrap: wrap;
       gap: 20px 32px;
-      margin-top: 24px;
+      margin-top: 20px;
     }
 
     .contact-links a {
       color: var(--gray);
-      font-weight: 500;
+      font-weight: 600;
       border-bottom: 1px solid transparent;
-      transition: 0.2s;
     }
 
     .contact-links a:hover {
       color: var(--white);
-      border-color: var(--orange);
+      border-color: var(--blue);
     }
 
     footer {
@@ -785,66 +533,42 @@
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
-      gap: 20px;
+      gap: 16px;
       color: var(--gray);
       font-size: 0.85rem;
     }
 
-    /* modal */
-    .modal-overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.7);
-      backdrop-filter: blur(8px);
-      z-index: 9999;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
+    /* REVEAL */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
     }
 
-    .modal-overlay.active {
-      display: flex;
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
 
-    .modal-box {
-      background: var(--dark-navy);
-      max-width: 600px;
-      width: 100%;
-      border: 1px solid var(--blue);
-      border-radius: 24px;
-      padding: 30px;
-    }
-
-    /* responsive */
+    /* RESPONSIVE */
     @media (max-width:1024px) {
-      .hero-photo-panel {
-        position: relative;
-        right: auto;
-        top: auto;
-        transform: none;
-        width: 100%;
-        max-width: 340px;
-        margin: 30px auto 0;
-      }
-
-      .hero {
+      .hero .container {
         flex-direction: column;
         text-align: center;
-        padding-top: 100px;
       }
 
-      .hero-content {
-        max-width: 100%;
-      }
-
-      .hero p {
+      .hero-content .summary {
         margin-left: auto;
         margin-right: auto;
       }
 
       .hero-cta {
         justify-content: center;
+      }
+
+      .hero-photo {
+        max-width: 320px;
+        margin: 0 auto;
       }
     }
 
@@ -872,46 +596,43 @@
       }
 
       h2 {
-        font-size: 2.2rem;
+        font-size: 2rem;
       }
 
-      .scroll-indicator {
-        display: none;
+      .hero-content h1 {
+        font-size: 2.6rem;
+      }
+
+      .hero-content .tagline {
+        font-size: 1.3rem;
+      }
+
+      .timeline {
+        padding-left: 16px;
+      }
+
+      .timeline-item::before {
+        left: -24px;
       }
     }
 
     @media (max-width:600px) {
-      .hero h1 {
-        font-size: 2.4rem;
-      }
-
-      .hero-photo-panel {
-        max-width: 100%;
-        height: 260px;
+      .hero-content h1 {
+        font-size: 2rem;
       }
 
       .contact-block {
         padding: 28px 20px;
       }
+
+      .hero-photo {
+        max-width: 100%;
+      }
     }
 
-    /* reveal */
-    .reveal {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
-    }
-
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* reduced motion */
     @media (prefers-reduced-motion:reduce) {
       * {
         animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
       }
 
       .reveal {
@@ -923,350 +644,786 @@
 </head>
 
 <body>
-  <!-- navbar -->
+
+  <!-- NAVBAR -->
   <nav class="navbar" id="navbar">
     <div class="nav-logo">LOAI <span>H.</span></div>
     <ul class="nav-links">
+      <li><a href="#design">Design</a></li>
+      <li><a href="#execution">Execution</a></li>
+      <li><a href="#testing">Testing</a></li>
+      <li><a href="#commissioning">Commissioning</a></li>
       <li><a href="#projects">Projects</a></li>
-      <li><a href="#engineering">Engineering</a></li>
-      <li><a href="#pvsyst">PVsyst</a></li>
-      <li><a href="#evidence">Evidence</a></li>
-      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
       <li><a href="#contact">Contact</a></li>
       <li><a href="#" class="nav-cv">CV</a></li>
     </ul>
     <button class="mobile-toggle" id="mobileToggle"><i class="fas fa-bars"></i></button>
   </nav>
 
-  <!-- scroll indicator -->
-  <div class="scroll-indicator">
-    <div class="fill" id="scrollFill"></div>
-  </div>
-
   <!-- HERO -->
   <section class="hero" id="home">
     <div class="hero-grid"></div>
-    <div class="hero-particles" id="particles"></div>
-    <div class="container" style="position:relative;z-index:2;width:100%;">
+    <div class="container">
       <div class="hero-content">
-        <div class="hero-badge">
-          <span class="btn" style="border-color:var(--blue);padding:4px 16px;font-size:0.6rem;">SOLAR PV /
-            ELECTRICAL</span>
-          <span class="status"><span class="status-dot"></span> OPEN TO OPPORTUNITIES</span>
-        </div>
-        <h1>I DESIGN THE SYSTEMS THAT TURN <span class="gold">SUNLIGHT</span> INTO POWER.</h1>
-        <p>Electrical Engineer specializing in Solar PV Design, PVsyst Simulation, Electrical Systems and Renewable
-          Energy Engineering.</p>
+        <span class="label">Electrical Engineer / Solar PV</span>
+        <h1>LOAI <span style="color:var(--blue);">HAMDOUN</span></h1>
+        <div class="subtitle">Electrical Engineer · Solar PV · Site Engineering · Testing & Commissioning</div>
+        <div class="tagline">DESIGN. EXECUTE. TEST. COMMISSION.</div>
+        <p class="summary">Electrical Engineer with hands-on experience in Solar PV design, utility-scale project
+          execution, electrical inspection, testing, pre-commissioning and energization support.</p>
         <div class="hero-cta">
-          <a href="#projects" class="btn btn-orange">EXPLORE PROJECTS →</a>
-          <a href="#" class="btn">DOWNLOAD CV</a>
-          <a href="#contact" class="secondary-link">LET'S CONNECT</a>
-        </div>
-        <div style="margin-top:20px;color:var(--gray);font-size:0.8rem;">Qena, Egypt</div>
-      </div>
-      <!-- photo panel -->
-      <!-- photo panel -->
-      <div class="hero-photo-panel" id="photoPanel" style="max-width: 320px; margin: 0 auto;">
-
-        <div class="photo-placeholder" style="
-    width: 100%; 
-    height: 380px; 
-    background-image: url('aaa.jpeg'); 
-    background-size: cover; 
-    background-position: 52% 40%; /* لضبط سنتر الصورة عليك مباشرة وخفض السماء */
-    background-repeat: no-repeat;
-    border-radius: 8px; /* يعطي حواف ناعمة واحترافية للكارت */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* ظل خفيف لإبراز الصورة */
-    background-color: #f0f0f0;">
-        </div>
-
-        <div class="photo-labels" style="display: flex; justify-content: space-between; margin-top: 12px; gap: 5px;">
-          <span style="flex: 1; text-align: center;">PV DESIGN</span>
-          <span style="flex: 1; text-align: center;">PVSYST</span>
-          <span style="flex: 1; text-align: center;">ELECTRICAL</span>
+          <a href="#projects" class="btn">View Projects</a>
+          <a href="#" class="btn btn-solar">Download CV</a>
+          <a href="#contact" style="color:var(--gray);font-weight:600;border-bottom:1px solid transparent;">Contact
+            Me</a>
         </div>
       </div>
-
-      <!-- mini energy line -->
-      <div class="hero-energy">
-        <span>SUN</span><span class="line"></span><span>PV</span><span class="line orange"></span><span>DC</span><span
-          class="line"></span><span>INV</span><span class="line yellow"></span><span>AC</span><span
-          class="line"></span><span>GRID</span>
-      </div>
-  </section>
-
-  <!-- TICKER -->
-  <div class="ticker-wrap">
-    <div class="ticker">
-      <span><i class="fas fa-solar-panel"></i>SOLAR PV DESIGN</span>
-      <span><i class="fas fa-chart-line"></i>PVSYST</span>
-      <span><i class="fas fa-bolt"></i>ELECTRICAL DESIGN</span>
-      <span><i class="fas fa-drafting-compass"></i>AUTOCAD</span>
-      <span><i class="fas fa-arrows-alt-h"></i>STRING SIZING</span>
-      <span><i class="fas fa-exchange-alt"></i>INVERTER SELECTION</span>
-      <span><i class="fas fa-water"></i>SOLAR PUMPING</span>
-      <span><i class="fas fa-file-alt"></i>TECHNICAL DOCUMENTATION</span>
-      <span><i class="fas fa-tools"></i>TESTING & COMMISSIONING</span>
-      <!-- duplicate for seamless -->
-      <span><i class="fas fa-chart-line"></i>PVSYST</span>
-      <span><i class="fas fa-bolt"></i>ELECTRICAL DESIGN</span>
-      <span><i class="fas fa-drafting-compass"></i>AUTOCAD</span>
-      <span><i class="fas fa-arrows-alt-h"></i>STRING SIZING</span>
-      <span><i class="fas fa-exchange-alt"></i>INVERTER SELECTION</span>
-      <span><i class="fas fa-water"></i>SOLAR PUMPING</span>
-      <span><i class="fas fa-file-alt"></i>TECHNICAL DOCUMENTATION</span>
-      <span><i class="fas fa-tools"></i>TESTING & COMMISSIONING</span>
-    </div>
-  </div>
-
-  <!-- ENGINEER IDENTITY -->
-  <section class="section-pad" style="background:var(--dark-navy);" id="about">
-    <div class="container">
-      <div class="section-title reveal"><span class="section-label">Identity</span>
-        <h2>ELECTRICAL ENGINEER. <span class="gold">SOLAR SPECIALIST.</span></h2>
-        <p style="font-size:1.1rem;color:var(--gray);max-width:600px;margin-top:12px;">I combine electrical engineering
-          principles with Solar PV design, simulation and technical documentation to develop practical renewable-energy
-          systems.</p>
-      </div>
-      <div class="grid-3">
-        <div class="card reveal">
-          <div class="icon"><i class="fas fa-bolt"></i></div>
-          <h3>ELECTRICAL</h3>
-          <p class="text-muted">Electrical Design · Protection · Cable Sizing · SLD · Earthing</p>
-          <div class="card-tags"><span>SLD</span><span>Protection</span></div>
-        </div>
-        <div class="card reveal">
-          <div class="icon"><i class="fas fa-sun"></i></div>
-          <h3>SOLAR PV</h3>
-          <p class="text-muted">PV Design · String Sizing · Inverter · PVsyst · Energy Yield</p>
-          <div class="card-tags"><span>PVsyst</span><span>String</span></div>
-        </div>
-        <div class="card reveal">
-          <div class="icon"><i class="fas fa-microchip"></i></div>
-          <h3>DIGITAL</h3>
-          <p class="text-muted">IoT · Data Analysis · Monitoring · Dashboards</p>
-          <div class="card-tags"><span>IoT</span><span>Python</span></div>
-        </div>
+      <div class="hero-photo">
+        <div class="ring"></div>
+        <div class="hero-photo-frame"></div>
+        <div class="solar-dot"></div>
       </div>
     </div>
+
+    <!-- SVG ENERGY FLOW - SOLAR ANIMATION -->
+    <svg style="position:absolute;bottom:6%;left:5%;z-index:1;opacity:0.4;width:380px;height:60px;"
+      viewBox="0 0 380 60">
+      <!-- Sun with glowing effect -->
+      <circle cx="22" cy="30" r="14" fill="#FFD166" opacity="0.4">
+        <animate attributeName="r" values="11;17;11" dur="3.5s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.3;0.7;0.3" dur="3.5s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="22" cy="30" r="18" fill="none" stroke="#FFD166" stroke-width="0.5" opacity="0.15">
+        <animate attributeName="r" values="18;28;18" dur="4.5s" repeatCount="indefinite" />
+      </circle>
+      <!-- Sun rays -->
+      <g opacity="0.5">
+        <line x1="22" y1="8" x2="22" y2="2" stroke="#FFD166" stroke-width="1.5">
+          <animate attributeName="opacity" values="0.2;0.6;0.2" dur="2s" repeatCount="indefinite" />
+        </line>
+        <line x1="40" y1="14" x2="46" y2="8" stroke="#FFD166" stroke-width="1.5">
+          <animate attributeName="opacity" values="0.2;0.6;0.2" dur="2.3s" repeatCount="indefinite" />
+        </line>
+        <line x1="4" y1="14" x2="-2" y2="8" stroke="#FFD166" stroke-width="1.5">
+          <animate attributeName="opacity" values="0.2;0.6;0.2" dur="2.6s" repeatCount="indefinite" />
+        </line>
+        <line x1="50" y1="30" x2="56" y2="30" stroke="#FFD166" stroke-width="1.5">
+          <animate attributeName="opacity" values="0.2;0.6;0.2" dur="2.9s" repeatCount="indefinite" />
+        </line>
+        <line x1="-6" y1="30" x2="-12" y2="30" stroke="#FFD166" stroke-width="1.5">
+          <animate attributeName="opacity" values="0.2;0.6;0.2" dur="3.2s" repeatCount="indefinite" />
+        </line>
+      </g>
+      <!-- Energy line to PV -->
+      <line x1="42" y1="30" x2="85" y2="30" stroke="#00AEEF" stroke-width="2" stroke-dasharray="6,4">
+        <animate attributeName="stroke-dashoffset" from="20" to="0" dur="1.5s" repeatCount="indefinite" />
+      </line>
+      <!-- PV Panel with realistic look -->
+      <rect x="90" y="12" width="55" height="36" rx="2" fill="#081B2E" stroke="#00AEEF" stroke-width="1.2">
+        <animate attributeName="stroke-opacity" values="0.3;1;0.3" dur="2.5s" repeatCount="indefinite" />
+      </rect>
+      <!-- PV cells grid -->
+      <line x1="95" y1="22" x2="140" y2="22" stroke="#00AEEF" stroke-width="0.5" opacity="0.2" />
+      <line x1="95" y1="30" x2="140" y2="30" stroke="#00AEEF" stroke-width="0.5" opacity="0.2" />
+      <line x1="105" y1="14" x2="105" y2="46" stroke="#00AEEF" stroke-width="0.5" opacity="0.15" />
+      <line x1="115" y1="14" x2="115" y2="46" stroke="#00AEEF" stroke-width="0.5" opacity="0.15" />
+      <line x1="125" y1="14" x2="125" y2="46" stroke="#00AEEF" stroke-width="0.5" opacity="0.15" />
+      <text x="96" y="10" fill="#8FA3B5" font-size="6" font-family="Inter">PV</text>
+      <!-- Energy particles -->
+      <circle cx="110" cy="30" r="3.5" fill="#00AEEF">
+        <animate attributeName="cx" values="100;135;100" dur="3s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.2;1;0.2" dur="3s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="120" cy="30" r="2" fill="#00AEEF">
+        <animate attributeName="cx" values="105;140;105" dur="3.5s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.2;0.8;0.2" dur="3.5s" repeatCount="indefinite" />
+      </circle>
+      <!-- Line to inverter -->
+      <line x1="150" y1="30" x2="195" y2="30" stroke="#FF9D00" stroke-width="2" stroke-dasharray="6,4">
+        <animate attributeName="stroke-dashoffset" from="20" to="0" dur="1.8s" repeatCount="indefinite" />
+      </line>
+      <!-- Inverter -->
+      <rect x="200" y="18" width="48" height="24" rx="3" fill="#081B2E" stroke="#FF9D00" stroke-width="1.2">
+        <animate attributeName="stroke-opacity" values="0.3;1;0.3" dur="2.8s" repeatCount="indefinite" />
+      </rect>
+      <text x="206" y="33" fill="#FF9D00" font-size="7" font-family="Inter">INV</text>
+      <circle cx="215" cy="30" r="2" fill="#FF9D00">
+        <animate attributeName="opacity" values="0.2;1;0.2" dur="1.5s" repeatCount="indefinite" />
+      </circle>
+      <!-- Line to grid -->
+      <line x1="253" y1="30" x2="298" y2="30" stroke="#FFD166" stroke-width="2" stroke-dasharray="6,4">
+        <animate attributeName="stroke-dashoffset" from="20" to="0" dur="2s" repeatCount="indefinite" />
+      </line>
+      <!-- Grid -->
+      <rect x="303" y="18" width="48" height="24" rx="3" fill="#081B2E" stroke="#FFD166" stroke-width="1.2">
+        <animate attributeName="stroke-opacity" values="0.3;1;0.3" dur="3s" repeatCount="indefinite" />
+      </rect>
+      <text x="309" y="33" fill="#FFD166" font-size="7" font-family="Inter">GRID</text>
+      <!-- Final energy pulse -->
+      <circle cx="325" cy="30" r="4" fill="#FFD166">
+        <animate attributeName="cx" values="312;340;312" dur="3.5s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.2;1;0.2" dur="3.5s" repeatCount="indefinite" />
+        <animate attributeName="r" values="2.5;5;2.5" dur="1.5s" repeatCount="indefinite" />
+      </circle>
+      <!-- Labels -->
+      <text x="12" y="52" fill="#8FA3B5" font-size="7" font-family="Inter" opacity="0.6">SUN</text>
+      <text x="105" y="52" fill="#8FA3B5" font-size="7" font-family="Inter" opacity="0.6">PV</text>
+      <text x="210" y="52" fill="#8FA3B5" font-size="7" font-family="Inter" opacity="0.6">INVERTER</text>
+      <text x="315" y="52" fill="#8FA3B5" font-size="7" font-family="Inter" opacity="0.6">GRID</text>
+    </svg>
   </section>
 
-  <!-- WHAT I ENGINEER (6 modules) -->
-  <section class="section-pad" id="engineering">
+  <!-- SECTION: DESIGN -->
+  <section class="section-pad" style="background:var(--dark-blue);" id="design">
     <div class="container">
-      <div class="section-title reveal"><span class="section-label">Capabilities</span>
-        <h2>WHAT I <span class="gold">ENGINEER</span></h2>
-      </div>
-      <div class="grid-3">
-        <div class="card reveal"><i class="fas fa-solar-panel" style="color:var(--orange);font-size:1.8rem;"></i>
-          <h3>PV SYSTEM DESIGN</h3>
-          <p class="text-muted">On-Grid · Off-Grid · Rooftop · Utility</p>
-        </div>
-        <div class="card reveal"><i class="fas fa-chart-line" style="color:var(--blue);font-size:1.8rem;"></i>
-          <h3>PVSYST</h3>
-          <p class="text-muted">Simulation · Yield · Loss · PR</p>
-        </div>
-        <div class="card reveal"><i class="fas fa-bolt" style="color:var(--yellow);font-size:1.8rem;"></i>
-          <h3>ELECTRICAL DESIGN</h3>
-          <p class="text-muted">Cable · Voltage Drop · Protection</p>
-        </div>
-        <div class="card reveal"><i class="fas fa-file-alt" style="color:var(--orange);font-size:1.8rem;"></i>
-          <h3>TECHNICAL DOCS</h3>
-          <p class="text-muted">SLD · Layouts · BOQ · Offers</p>
-        </div>
-        <div class="card reveal"><i class="fas fa-water" style="color:var(--blue);font-size:1.8rem;"></i>
-          <h3>SOLAR PUMPING</h3>
-          <p class="text-muted">Hydraulics · Pump · PV Sizing</p>
-        </div>
-        <div class="card reveal"><i class="fas fa-database" style="color:var(--yellow);font-size:1.8rem;"></i>
-          <h3>DIGITAL ENERGY</h3>
-          <p class="text-muted">IoT · Monitoring · Dashboards</p>
-        </div>
-      </div>
-  </section>
+      <div class="section-label">01. Design</div>
+      <h2>From Sunlight to <span style="color:var(--blue);">System Design</span></h2>
 
-  <!-- PROJECTS with filter -->
-  <section class="section-pad" style="background:var(--dark-navy);" id="projects">
-    <div class="container">
-      <div class="section-title reveal"><span class="section-label">Portfolio</span>
-        <h2>ENGINEERING IN <span class="gold">ACTION.</span></h2>
-        <p class="text-muted">Real engineering thinking. Technical studies. Design evidence.</p>
+      <!-- SVG Solar Array with Sun - Enhanced -->
+      <div style="margin:24px 0;display:flex;justify-content:center;">
+        <svg width="680" height="190" viewBox="0 0 680 190">
+          <!-- Sun with rays -->
+          <circle cx="50" cy="40" r="22" fill="#FFD166" opacity="0.35">
+            <animate attributeName="r" values="18;26;18" dur="4s" repeatCount="indefinite" />
+            <animate attributeName="opacity" values="0.25;0.5;0.25" dur="4s" repeatCount="indefinite" />
+          </circle>
+          <circle cx="50" cy="40" r="30" fill="none" stroke="#FFD166" stroke-width="0.5" opacity="0.12">
+            <animate attributeName="r" values="30;42;30" dur="5s" repeatCount="indefinite" />
+          </circle>
+          <g opacity="0.35">
+            <line x1="50" y1="8" x2="50" y2="14" stroke="#FFD166" stroke-width="2">
+              <animate attributeName="opacity" values="0.2;0.6;0.2" dur="2s" repeatCount="indefinite" />
+            </line>
+            <line x1="74" y1="16" x2="68" y2="22" stroke="#FFD166" stroke-width="2">
+              <animate attributeName="opacity" values="0.2;0.6;0.2" dur="2.3s" repeatCount="indefinite" />
+            </line>
+            <line x1="26" y1="16" x2="32" y2="22" stroke="#FFD166" stroke-width="2">
+              <animate attributeName="opacity" values="0.2;0.6;0.2" dur="2.6s" repeatCount="indefinite" />
+            </line>
+            <line x1="84" y1="32" x2="76" y2="36" stroke="#FFD166" stroke-width="2">
+              <animate attributeName="opacity" values="0.2;0.6;0.2" dur="2.9s" repeatCount="indefinite" />
+            </line>
+            <line x1="16" y1="32" x2="24" y2="36" stroke="#FFD166" stroke-width="2">
+              <animate attributeName="opacity" values="0.2;0.6;0.2" dur="3.2s" repeatCount="indefinite" />
+            </line>
+            <line x1="86" y1="52" x2="78" y2="54" stroke="#FFD166" stroke-width="2">
+              <animate attributeName="opacity" values="0.2;0.6;0.2" dur="3.5s" repeatCount="indefinite" />
+            </line>
+            <line x1="14" y1="52" x2="22" y2="54" stroke="#FFD166" stroke-width="2">
+              <animate attributeName="opacity" values="0.2;0.6;0.2" dur="3.8s" repeatCount="indefinite" />
+            </line>
+          </g>
+
+          <!-- Solar Panels Array - Row 1 (6 panels) -->
+          <g>
+            <rect x="95" y="50" width="70" height="45" rx="3" fill="#081B2E" stroke="#00AEEF" stroke-width="1.2">
+              <animate attributeName="stroke-opacity" values="0.3;1;0.3" dur="3s" repeatCount="indefinite" />
+            </rect>
+            <line x1="100" y1="67" x2="160" y2="67" stroke="#00AEEF" stroke-width="0.5" opacity="0.2" />
+            <line x1="100" y1="83" x2="160" y2="83" stroke="#00AEEF" stroke-width="0.5" opacity="0.2" />
+            <line x1="120" y1="52" x2="120" y2="93" stroke="#00AEEF" stroke-width="0.5" opacity="0.15" />
+            <line x1="140" y1="52" x2="140" y2="93" stroke="#00AEEF" stroke-width="0.5" opacity="0.15" />
+
+            <rect x="175" y="50" width="70" height="45" rx="3" fill="#081B2E" stroke="#00AEEF" stroke-width="1.2">
+              <animate attributeName="stroke-opacity" values="0.3;1;0.3" dur="3.2s" repeatCount="indefinite" />
+            </rect>
+            <line x1="180" y1="67" x2="240" y2="67" stroke="#00AEEF" stroke-width="0.5" opacity="0.2" />
+            <line x1="180" y1="83" x2="240" y2="83" stroke="#00AEEF" stroke-width="0.5" opacity="0.2" />
+            <line x1="200" y1="52" x2="200" y2="93" stroke="#00AEEF" stroke-width="0.5" opacity="0.15" />
+            <line x1="220" y1="52" x2="220" y2="93" stroke="#00AEEF" stroke-width="0.5" opacity="0.15" />
+
+            <rect x="255" y="50" width="70" height="45" rx="3" fill="#081B2E" stroke="#00AEEF" stroke-width="1.2">
+              <animate attributeName="stroke-opacity" values="0.3;1;0.3" dur="3.4s" repeatCount="indefinite" />
+            </rect>
+            <line x1="260" y1="67" x2="320" y2="67" stroke="#00AEEF" stroke-width="0.5" opacity="0.2" />
+            <line x1="260" y1="83" x2="320" y2="83" stroke="#00AEEF" stroke-width="0.5" opacity="0.2" />
+            <line x1="280" y1="52" x2="280" y2="93" stroke="#00AEEF" stroke-width="0.5" opacity="0.15" />
+            <line x1="300" y1="52" x2="300" y2="93" stroke="#00AEEF" stroke-width="0.5" opacity="0.15" />
+          </g>
+
+          <!-- Row 2 -->
+          <g>
+            <rect x="95" y="105" width="70" height="45" rx="3" fill="#081B2E" stroke="#00AEEF" stroke-width="1.2">
+              <animate attributeName="stroke-opacity" values="0.3;1;0.3" dur="3.6s" repeatCount="indefinite" />
+            </rect>
+            <line x1="100" y1="122" x2="160" y2="122" stroke="#00AEEF" stroke-width="0.5" opacity="0.2" />
+            <line x1="100" y1="138" x2="160" y2="138" stroke="#00AEEF" stroke-width="0.5" opacity="0.2" />
+            <line x1="120" y1="107" x2="120" y2="148" stroke="#00AEEF" stroke-width="0.5" opacity="0.15" />
+            <line x1="140" y1="107" x2="140" y2="148" stroke="#00AEEF" stroke-width="0.5" opacity="0.15" />
+
+            <rect x="175" y="105" width="70" height="45" rx="3" fill="#081B2E" stroke="#00AEEF" stroke-width="1.2">
+              <animate attributeName="stroke-opacity" values="0.3;1;0.3" dur="3.8s" repeatCount="indefinite" />
+            </rect>
+            <line x1="180" y1="122" x2="240" y2="122" stroke="#00AEEF" stroke-width="0.5" opacity="0.2" />
+            <line x1="180" y1="138" x2="240" y2="138" stroke="#00AEEF" stroke-width="0.5" opacity="0.2" />
+            <line x1="200" y1="107" x2="200" y2="148" stroke="#00AEEF" stroke-width="0.5" opacity="0.15" />
+            <line x1="220" y1="107" x2="220" y2="148" stroke="#00AEEF" stroke-width="0.5" opacity="0.15" />
+
+            <rect x="255" y="105" width="70" height="45" rx="3" fill="#081B2E" stroke="#00AEEF" stroke-width="1.2">
+              <animate attributeName="stroke-opacity" values="0.3;1;0.3" dur="4s" repeatCount="indefinite" />
+            </rect>
+            <line x1="260" y1="122" x2="320" y2="122" stroke="#00AEEF" stroke-width="0.5" opacity="0.2" />
+            <line x1="260" y1="138" x2="320" y2="138" stroke="#00AEEF" stroke-width="0.5" opacity="0.2" />
+            <line x1="280" y1="107" x2="280" y2="148" stroke="#00AEEF" stroke-width="0.5" opacity="0.15" />
+            <line x1="300" y1="107" x2="300" y2="148" stroke="#00AEEF" stroke-width="0.5" opacity="0.15" />
+          </g>
+
+          <!-- Energy flow with particles -->
+          <line x1="340" y1="82" x2="410" y2="82" stroke="#FF9D00" stroke-width="2.5">
+            <animate attributeName="stroke-dashoffset" from="70" to="0" dur="2s" repeatCount="indefinite" />
+          </line>
+          <polygon points="410,72 425,82 410,92" fill="#FF9D00" opacity="0.6">
+            <animate attributeName="opacity" values="0.4;1;0.4" dur="1.5s" repeatCount="indefinite" />
+          </polygon>
+          <circle cx="360" cy="82" r="4" fill="#FF9D00">
+            <animate attributeName="cx" values="350;405;350" dur="2s" repeatCount="indefinite" />
+            <animate attributeName="opacity" values="0.2;1;0.2" dur="2s" repeatCount="indefinite" />
+          </circle>
+          <circle cx="380" cy="82" r="3" fill="#FFD166">
+            <animate attributeName="cx" values="360;415;360" dur="2.5s" repeatCount="indefinite" />
+            <animate attributeName="opacity" values="0.2;1;0.2" dur="2.5s" repeatCount="indefinite" />
+          </circle>
+          <circle cx="370" cy="82" r="2" fill="#00AEEF">
+            <animate attributeName="cx" values="355;410;355" dur="3s" repeatCount="indefinite" />
+            <animate attributeName="opacity" values="0.2;0.8;0.2" dur="3s" repeatCount="indefinite" />
+          </circle>
+
+          <text x="440" y="86" fill="#8FA3B5" font-size="12" font-family="Inter">← Energy Flow</text>
+        </svg>
       </div>
-      <div class="filter-bar" id="filterBar">
-        <button class="filter-btn active" data-filter="all">ALL</button>
-        <button class="filter-btn" data-filter="pv">PV DESIGN</button>
-        <button class="filter-btn" data-filter="pvsyst">PVSYST</button>
-        <button class="filter-btn" data-filter="electrical">ELECTRICAL</button>
-        <button class="filter-btn" data-filter="utility">UTILITY</button>
-        <button class="filter-btn" data-filter="pumping">PUMPING</button>
+
+      <div style="display:flex;flex-wrap:wrap;gap:20px;margin-top:10px;">
+        <div class="card" style="flex:1;min-width:200px;">
+          <i class="fas fa-solar-panel icon"></i>
+          <h3>PV System Design</h3>
+          <p class="text-muted">Array layout · String sizing · Inverter selection</p>
+        </div>
+        <div class="card" style="flex:1;min-width:200px;">
+          <i class="fas fa-chart-line icon"></i>
+          <h3>PVsyst</h3>
+          <p class="text-muted">Simulation · Loss analysis · System performance</p>
+        </div>
+        <div class="card" style="flex:1;min-width:200px;">
+          <i class="fas fa-bolt icon"></i>
+          <h3>Electrical Design</h3>
+          <p class="text-muted">SLD · Cable sizing · Protection · Earthing</p>
+        </div>
       </div>
-      <div class="grid-2" id="projectGrid">
-        <div class="project-card" data-cat="pv">
-          <div class="img-placeholder"><i class="fas fa-draw-polygon"></i> PV Layout</div>
-          <div class="project-info"><span class="cat">ROOFTOP / ON-GRID</span>
-            <h3>34 kWp ON-GRID PV</h3>
-            <div class="project-tags"><span>PV DESIGN</span><span>STRING</span><span>INVERTER</span></div><a href="#"
-              class="project-cta">VIEW CASE →</a>
-          </div>
-        </div>
-        <div class="project-card" data-cat="pvsyst">
-          <div class="img-placeholder"><i class="fas fa-chart-pie"></i> PVsyst Dashboard</div>
-          <div class="project-info"><span class="cat">PV SYSTEM ANALYSIS</span>
-            <h3>PVSYST SIMULATION</h3>
-            <div class="project-tags"><span>PVSYST</span><span>YIELD</span><span>LOSS</span></div><a href="#"
-              class="project-cta">VIEW STUDY →</a>
-          </div>
-        </div>
-        <div class="project-card" data-cat="pv">
-          <div class="img-placeholder"><i class="fas fa-building"></i> Rooftop Layout</div>
-          <div class="project-info"><span class="cat">SOLAR PV DESIGN</span>
-            <h3>ROOFTOP PV DESIGN</h3>
-            <div class="project-tags"><span>AUTOCAD</span><span>ORIENTATION</span><span>SLD</span></div><a href="#"
-              class="project-cta">VIEW CASE →</a>
-          </div>
-        </div>
-        <div class="project-card" data-cat="utility">
-          <div class="img-placeholder"><i class="fas fa-tachometer-alt"></i> SCADA</div>
-          <div class="project-info"><span class="cat">UTILITY-SCALE</span>
-            <h3>UTILITY-SCALE PV STUDY</h3>
-            <div class="project-tags"><span>PV BLOCKS</span><span>DC/AC</span><span>MV</span></div><a href="#"
-              class="project-cta">VIEW STUDY →</a>
-          </div>
-        </div>
-        <div class="project-card" data-cat="pumping">
-          <div class="img-placeholder"><i class="fas fa-water"></i> Pump System</div>
-          <div class="project-info"><span class="cat">SOLAR PUMPING</span>
-            <h3>SOLAR WATER PUMPING</h3>
-            <div class="project-tags"><span>HYDRAULICS</span><span>PUMP</span><span>CONTROLLER</span></div><a href="#"
-              class="project-cta">VIEW CASE →</a>
-          </div>
-        </div>
+      <div class="wf-grid" style="margin-top:24px;">
+        <span class="wf-node"><span class="num">01</span>Site</span>
+        <span class="wf-node"><span class="num">02</span>PV Array</span>
+        <span class="wf-node"><span class="num">03</span>Strings</span>
+        <span class="wf-node"><span class="num">04</span>Inverter</span>
+        <span class="wf-node"><span class="num">05</span>AC System</span>
+        <span class="wf-node"><span class="num">06</span>Grid</span>
       </div>
     </div>
   </section>
 
-  <!-- WORKFLOW -->
-  <section class="section-pad">
+  <!-- PVSYST -->
+  <section class="section-pad" id="pvsyst">
     <div class="container">
-      <div class="section-title reveal"><span class="section-label">Process</span>
-        <h2>FROM SITE TO <span class="gold">ENERGY</span></h2>
-      </div>
-      <div class="workflow-grid reveal">
-        <span class="wf-node"><span class="num">01</span>SITE</span><span class="wf-node"><span
-            class="num">02</span>LOAD</span>
-        <span class="wf-node"><span class="num">03</span>PV</span><span class="wf-node"><span
-            class="num">04</span>STRING</span>
-        <span class="wf-node"><span class="num">05</span>INVERTER</span><span class="wf-node"><span
-            class="num">06</span>MPPT</span>
-        <span class="wf-node"><span class="num">07</span>ELECTRICAL</span><span class="wf-node"><span
-            class="num">08</span>PVSYST</span>
-        <span class="wf-node"><span class="num">09</span>SLD</span><span class="wf-node"><span
-            class="num">10</span>BOQ</span>
-        <span class="wf-node"><span class="num">11</span>COMMISSION</span>
-      </div>
-  </section>
+      <div class="section-label">PVsyst</div>
+      <h2>Simulate Before <span style="color:var(--solar);">You Build</span></h2>
 
-  <!-- PVSYST SECTION -->
-  <section class="section-pad" style="background:var(--dark-navy);" id="pvsyst">
-    <div class="container">
-      <div class="section-title reveal"><span class="section-label">PVsyst</span>
-        <h2>SIMULATE BEFORE <span class="gold">YOU BUILD.</span></h2>
+      <!-- SVG PVsyst Dashboard Enhanced -->
+      <div style="margin:20px 0;display:flex;justify-content:center;">
+        <svg width="600" height="190" viewBox="0 0 600 190">
+          <rect x="10" y="10" width="580" height="170" rx="14" fill="#081B2E" stroke="#00AEEF" stroke-width="0.5"
+            opacity="0.6" />
+          <text x="30" y="45" fill="#8FA3B5" font-size="12" font-family="Inter" font-weight="600">PVsyst Simulation
+            Dashboard</text>
+
+          <!-- Energy bar with glow -->
+          <rect x="30" y="70" width="250" height="18" rx="9" fill="#00AEEF" opacity="0.08" />
+          <rect x="30" y="70" width="0" height="18" rx="9" fill="#00AEEF" opacity="0.6">
+            <animate attributeName="width" from="0" to="210" dur="3s" fill="freeze" />
+          </rect>
+          <circle cx="240" cy="79" r="4" fill="#00AEEF" opacity="0.3">
+            <animate attributeName="opacity" values="0.1;0.5;0.1" dur="1.5s" repeatCount="indefinite" />
+          </circle>
+          <text x="295" y="83" fill="#00AEEF" font-size="9" font-family="Inter" font-weight="600">Energy Yield
+            [kWh]</text>
+
+          <!-- Loss bar -->
+          <rect x="30" y="98" width="250" height="18" rx="9" fill="#FF9D00" opacity="0.08" />
+          <rect x="30" y="98" width="0" height="18" rx="9" fill="#FF9D00" opacity="0.6">
+            <animate attributeName="width" from="0" to="165" dur="3.5s" fill="freeze" />
+          </rect>
+          <text x="295" y="111" fill="#FF9D00" font-size="9" font-family="Inter" font-weight="600">System Losses
+            [%]</text>
+
+          <!-- PR bar -->
+          <rect x="30" y="126" width="250" height="18" rx="9" fill="#FFD166" opacity="0.08" />
+          <rect x="30" y="126" width="0" height="18" rx="9" fill="#FFD166" opacity="0.6">
+            <animate attributeName="width" from="0" to="135" dur="4s" fill="freeze" />
+          </rect>
+          <text x="295" y="139" fill="#FFD166" font-size="9" font-family="Inter" font-weight="600">Performance Ratio
+            [%]</text>
+
+          <text x="30" y="170" fill="#8FA3B5" font-size="8" font-family="Inter">* Demonstration Data - For visualization
+            purposes</text>
+        </svg>
       </div>
-      <div class="grid-3 reveal">
-        <div class="card"><i class="fas fa-sun" style="color:var(--yellow);font-size:1.8rem;"></i>
+
+      <div class="grid-3" style="margin-top:10px;">
+        <div class="card"><i class="fas fa-sun icon"></i>
           <h3>Energy Yield</h3>
-          <p class="text-muted">[VERIFIED DATA]</p>
+          <p class="text-muted">[Verified Data to be Added]</p>
         </div>
-        <div class="card"><i class="fas fa-chart-bar" style="color:var(--orange);font-size:1.8rem;"></i>
-          <h3>Specific Production</h3>
-          <p class="text-muted">[VERIFIED DATA]</p>
+        <div class="card"><i class="fas fa-chart-bar icon"></i>
+          <h3>Loss Analysis</h3>
+          <p class="text-muted">[Verified Data to be Added]</p>
         </div>
-        <div class="card"><i class="fas fa-percent" style="color:var(--blue);font-size:1.8rem;"></i>
+        <div class="card"><i class="fas fa-percent icon"></i>
           <h3>Performance Ratio</h3>
-          <p class="text-muted">[VERIFIED DATA]</p>
+          <p class="text-muted">[Verified Data to be Added]</p>
         </div>
       </div>
-      <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:20px;" class="reveal">
-        <span class="wf-node">METEO</span><span class="wf-node">ORIENTATION</span><span class="wf-node">SYSTEM</span>
-        <span class="wf-node">MODULE</span><span class="wf-node">INVERTER</span><span class="wf-node">STRINGS</span>
-        <span class="wf-node">SHADING</span><span class="wf-node">SIMULATION</span><span class="wf-node"
-          style="border-color:var(--orange);">ENERGY</span>
+    </div>
+  </section>
+
+  <!-- SECTION: EXECUTION -->
+  <section class="section-pad" style="background:var(--dark-blue);" id="execution">
+    <div class="container">
+      <div class="section-label">02. Execution</div>
+      <h2>From Drawing to <span style="color:var(--solar);">Real Site</span></h2>
+
+      <!-- SVG Construction Site Enhanced -->
+      <div style="margin:20px 0;display:flex;justify-content:center;">
+        <svg width="560" height="130" viewBox="0 0 560 130">
+          <!-- Solar panels under construction -->
+          <rect x="10" y="25" width="80" height="55" rx="4" fill="#081B2E" stroke="#FF9D00" stroke-width="1.2">
+            <animate attributeName="stroke-opacity" values="0.3;1;0.3" dur="2.5s" repeatCount="indefinite" />
+          </rect>
+          <line x1="15" y1="42" x2="85" y2="42" stroke="#FF9D00" stroke-width="0.5" opacity="0.2" />
+          <line x1="15" y1="60" x2="85" y2="60" stroke="#FF9D00" stroke-width="0.5" opacity="0.2" />
+
+          <rect x="100" y="25" width="80" height="55" rx="4" fill="#081B2E" stroke="#FF9D00" stroke-width="1.2">
+            <animate attributeName="stroke-opacity" values="0.3;1;0.3" dur="2.7s" repeatCount="indefinite" />
+          </rect>
+          <line x1="105" y1="42" x2="175" y2="42" stroke="#FF9D00" stroke-width="0.5" opacity="0.2" />
+          <line x1="105" y1="60" x2="175" y2="60" stroke="#FF9D00" stroke-width="0.5" opacity="0.2" />
+
+          <rect x="190" y="25" width="80" height="55" rx="4" fill="#081B2E" stroke="#FF9D00" stroke-width="1.2">
+            <animate attributeName="stroke-opacity" values="0.3;1;0.3" dur="2.9s" repeatCount="indefinite" />
+          </rect>
+          <line x1="195" y1="42" x2="265" y2="42" stroke="#FF9D00" stroke-width="0.5" opacity="0.2" />
+          <line x1="195" y1="60" x2="265" y2="60" stroke="#FF9D00" stroke-width="0.5" opacity="0.2" />
+
+          <rect x="280" y="25" width="80" height="55" rx="4" fill="#081B2E" stroke="#FF9D00" stroke-width="1.2">
+            <animate attributeName="stroke-opacity" values="0.3;1;0.3" dur="3.1s" repeatCount="indefinite" />
+          </rect>
+          <line x1="285" y1="42" x2="355" y2="42" stroke="#FF9D00" stroke-width="0.5" opacity="0.2" />
+          <line x1="285" y1="60" x2="355" y2="60" stroke="#FF9D00" stroke-width="0.5" opacity="0.2" />
+
+          <!-- Crane -->
+          <line x1="390" y1="80" x2="390" y2="18" stroke="#8FA3B5" stroke-width="1.8" opacity="0.4" />
+          <line x1="390" y1="18" x2="440" y2="18" stroke="#8FA3B5" stroke-width="1.8" opacity="0.4" />
+          <line x1="440" y1="18" x2="440" y2="48" stroke="#8FA3B5" stroke-width="1.2" opacity="0.4" />
+          <rect x="434" y="48" width="12" height="10" fill="#8FA3B5" opacity="0.3" />
+
+          <!-- Progress line -->
+          <line x1="390" y1="52" x2="450" y2="52" stroke="#00AEEF" stroke-width="2" stroke-dasharray="6,4">
+            <animate attributeName="stroke-dashoffset" from="20" to="0" dur="1.5s" repeatCount="indefinite" />
+          </line>
+          <circle cx="455" cy="52" r="5" fill="#00AEEF" opacity="0.5">
+            <animate attributeName="r" values="3;7;3" dur="1.2s" repeatCount="indefinite" />
+          </circle>
+          <text x="470" y="56" fill="#8FA3B5" font-size="10" font-family="Inter">Construction Progress</text>
+        </svg>
       </div>
+
+      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:10px;">
+        <span class="wf-node">Construction Monitoring</span>
+        <span class="wf-node">PV String Inspection</span>
+        <span class="wf-node">Combiner Boxes</span>
+        <span class="wf-node">DC Collection</span>
+        <span class="wf-node">Inverter Stations</span>
+        <span class="wf-node">SLD Review</span>
+        <span class="wf-node">Installation Verification</span>
+      </div>
+      <div class="wf-grid" style="margin-top:24px;">
+        <span class="wf-node"><span class="num">01</span>Design</span>
+        <span class="wf-node"><span class="num">02</span>Site</span>
+        <span class="wf-node"><span class="num">03</span>Installation</span>
+        <span class="wf-node"><span class="num">04</span>Inspection</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- OBELISK PROJECT -->
+  <section class="section-pad" id="obelisk">
+    <div class="container">
+      <div class="section-label">⭐ Featured Project</div>
+      <h2>Obelisk Solar PV <span style="color:var(--solar);">Project</span></h2>
+      <div style="display:flex;flex-wrap:wrap;gap:20px;margin-top:16px;">
+        <div style="flex:1;min-width:250px;">
+          <p class="text-muted" style="font-weight:700;">SCATEC · Site Engineer – Electrical / Solar PV</p>
+          <p class="text-muted" style="font-size:0.9rem;">SAMCRETE Engineers & Contractors · Feb 2026 – Jul 2026</p>
+          <div style="margin:12px 0;display:flex;flex-wrap:wrap;gap:6px;">
+            <span class="card-tags"><span>PV Strings</span><span>Combiner Boxes</span><span>DC
+                Collection</span><span>Inverter
+                Stations</span><span>Testing</span><span>Pre-Commissioning</span><span>Energization
+                Support</span></span>
+          </div>
+        </div>
+        <div
+          style="flex:1;min-width:200px;background:rgba(255,157,0,0.03);border:1px solid rgba(255,157,0,0.08);border-radius:16px;padding:20px;">
+          <div style="font-size:0.8rem;color:var(--solar);font-weight:600;">🔑 Key Contributions</div>
+          <ul style="color:var(--gray);font-size:0.8rem;list-style:none;margin-top:6px;">
+            <li>• Electrical construction & inspection</li>
+            <li>• PV string & combiner box verification</li>
+            <li>• DC collection & inverter station oversight</li>
+            <li>• Testing & pre-commissioning execution</li>
+            <li>• Energization support & punch-list closure</li>
+          </ul>
+        </div>
+      </div>
+      <div class="wf-grid" style="margin-top:16px;">
+        <span class="wf-node"><span class="num">01</span>PV Strings</span>
+        <span class="wf-node"><span class="num">02</span>Combiner Boxes</span>
+        <span class="wf-node"><span class="num">03</span>DC Collection</span>
+        <span class="wf-node"><span class="num">04</span>Inverter Stations</span>
+        <span class="wf-node"><span class="num">05</span>Testing</span>
+        <span class="wf-node"><span class="num">06</span>Pre-Commissioning</span>
+        <span class="wf-node"><span class="num" style="color:var(--solar);">07</span>Energization Support</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: TESTING -->
+  <section class="section-pad" style="background:var(--dark-blue);" id="testing">
+    <div class="container">
+      <div class="section-label">03. Testing</div>
+      <h2>Test Before <span style="color:var(--blue);">Energization</span></h2>
+
+      <!-- SVG Testing Enhanced -->
+      <div style="margin:20px 0;display:flex;justify-content:center;">
+        <svg width="540" height="80" viewBox="0 0 540 80">
+          <rect x="10" y="18" width="70" height="44" rx="10" fill="#081B2E" stroke="#00AEEF" stroke-width="1.5">
+            <animate attributeName="stroke-opacity" values="0.3;1;0.3" dur="1.8s" repeatCount="indefinite" />
+          </rect>
+          <text x="24" y="45" fill="#00AEEF" font-size="10" font-family="Inter" font-weight="700">TEST</text>
+          <line x1="90" y1="40" x2="145" y2="40" stroke="#FF9D00" stroke-width="2.5" stroke-dasharray="8,5">
+            <animate attributeName="stroke-dashoffset" from="26" to="0" dur="1.2s" repeatCount="indefinite" />
+          </line>
+          <circle cx="152" cy="40" r="7" fill="#FF9D00" opacity="0.5">
+            <animate attributeName="r" values="5;10;5" dur="1s" repeatCount="indefinite" />
+            <animate attributeName="opacity" values="0.3;0.8;0.3" dur="1s" repeatCount="indefinite" />
+          </circle>
+          <text x="175" y="45" fill="#8FA3B5" font-size="10" font-family="Inter">Voltage · Polarity · Continuity ·
+            Insulation · Megger</text>
+        </svg>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:14px;margin-top:10px;">
+        <div class="card" style="text-align:center;padding:16px 10px;cursor:pointer;"
+          data-test="Voltage testing verifies proper DC/AC levels. Essential for safety and performance.">
+          <i class="fas fa-bolt" style="color:var(--blue);font-size:1.6rem;"></i>
+          <div style="font-size:0.75rem;margin-top:4px;font-weight:600;">Voltage</div>
+        </div>
+        <div class="card" style="text-align:center;padding:16px 10px;cursor:pointer;"
+          data-test="Polarity testing ensures correct string and phase orientation. Critical for system integrity.">
+          <i class="fas fa-arrow-right" style="color:var(--blue);font-size:1.6rem;"></i>
+          <div style="font-size:0.75rem;margin-top:4px;font-weight:600;">Polarity</div>
+        </div>
+        <div class="card" style="text-align:center;padding:16px 10px;cursor:pointer;"
+          data-test="Continuity testing validates cable and connection integrity. Ensures reliable power transmission.">
+          <i class="fas fa-link" style="color:var(--blue);font-size:1.6rem;"></i>
+          <div style="font-size:0.75rem;margin-top:4px;font-weight:600;">Continuity</div>
+        </div>
+        <div class="card" style="text-align:center;padding:16px 10px;cursor:pointer;"
+          data-test="Insulation Resistance (Megger) testing checks insulation quality. Prevents leakage and faults.">
+          <i class="fas fa-shield-alt" style="color:var(--blue);font-size:1.6rem;"></i>
+          <div style="font-size:0.75rem;margin-top:4px;font-weight:600;">Insulation</div>
+        </div>
+        <div class="card" style="text-align:center;padding:16px 10px;cursor:pointer;"
+          data-test="Megger testing measures insulation resistance in cables and equipment. Critical for safety compliance.">
+          <i class="fas fa-microscope" style="color:var(--blue);font-size:1.6rem;"></i>
+          <div style="font-size:0.75rem;margin-top:4px;font-weight:600;">Megger</div>
+        </div>
+      </div>
+      <div id="testDetail" class="card" style="margin-top:16px;border-color:rgba(0,174,239,0.08);">
+        <p class="text-muted" style="font-size:0.9rem;">🔍 Click any test type above for detailed engineering
+          explanation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: COMMISSIONING -->
+  <section class="section-pad" id="commissioning">
+    <div class="container">
+      <div class="section-label">04. Commissioning</div>
+      <h2>From Testing to <span style="color:var(--gold);">Energization</span></h2>
+
+      <!-- SVG Commissioning Flow Enhanced -->
+      <div style="margin:20px 0;display:flex;justify-content:center;">
+        <svg width="650" height="85" viewBox="0 0 650 85">
+          <rect x="10" y="20" width="85" height="46" rx="10" fill="#081B2E" stroke="#FFD166" stroke-width="1.5">
+            <animate attributeName="stroke-opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite" />
+          </rect>
+          <text x="18" y="48" fill="#FFD166" font-size="8" font-family="Inter" font-weight="700">Pre-Comm.</text>
+          <line x1="105" y1="43" x2="145" y2="43" stroke="#FF9D00" stroke-width="2" stroke-dasharray="5,4">
+            <animate attributeName="stroke-dashoffset" from="18" to="0" dur="1.5s" repeatCount="indefinite" />
+          </line>
+          <rect x="155" y="20" width="85" height="46" rx="10" fill="#081B2E" stroke="#FFD166" stroke-width="1.5">
+            <animate attributeName="stroke-opacity" values="0.3;1;0.3" dur="2.2s" repeatCount="indefinite" />
+          </rect>
+          <text x="163" y="48" fill="#FFD166" font-size="8" font-family="Inter" font-weight="700">Pre-Energ.</text>
+          <line x1="250" y1="43" x2="290" y2="43" stroke="#FF9D00" stroke-width="2" stroke-dasharray="5,4">
+            <animate attributeName="stroke-dashoffset" from="18" to="0" dur="1.5s" repeatCount="indefinite" />
+          </line>
+          <rect x="300" y="20" width="95" height="46" rx="10" fill="#081B2E" stroke="#FFD166" stroke-width="1.5">
+            <animate attributeName="stroke-opacity" values="0.3;1;0.3" dur="2.4s" repeatCount="indefinite" />
+          </rect>
+          <text x="308" y="48" fill="#FFD166" font-size="8" font-family="Inter" font-weight="700">Energization</text>
+          <line x1="405" y1="43" x2="445" y2="43" stroke="#FF9D00" stroke-width="2.5">
+            <animate attributeName="stroke-dashoffset" from="40" to="0" dur="1s" repeatCount="indefinite" />
+          </line>
+          <circle cx="462" cy="43" r="10" fill="#FFD166" opacity="0.4">
+            <animate attributeName="r" values="7;15;7" dur="1.2s" repeatCount="indefinite" />
+            <animate attributeName="opacity" values="0.2;0.7;0.2" dur="1.2s" repeatCount="indefinite" />
+          </circle>
+          <circle cx="462" cy="43" r="4" fill="#FFD166">
+            <animate attributeName="opacity" values="0.3;1;0.3" dur="0.8s" repeatCount="indefinite" />
+          </circle>
+          <text x="485" y="48" fill="#8FA3B5" font-size="10" font-family="Inter">→ Commissioning Complete</text>
+        </svg>
+      </div>
+
+      <div class="wf-grid" style="margin-top:10px;">
+        <span class="wf-node"><span class="num">01</span>Pre-Commissioning</span>
+        <span class="wf-node"><span class="num">02</span>Pre-Energization</span>
+        <span class="wf-node"><span class="num">03</span>Inspection</span>
+        <span class="wf-node"><span class="num">04</span>Punch-List</span>
+        <span class="wf-node"><span class="num">05</span>Corrective Actions</span>
+        <span class="wf-node"><span class="num" style="color:var(--gold);">06</span>Energization Support</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ELECTRICAL SYSTEMS -->
+  <section class="section-pad" style="background:var(--dark-blue);">
+    <div class="container">
+      <div class="section-label">Electrical Engineering</div>
+      <h2>LV · MV · HV · <span style="color:var(--blue);">Protection</span></h2>
+
+      <!-- SVG Electrical System Enhanced -->
+      <div style="margin:20px 0;display:flex;justify-content:center;">
+        <svg width="650" height="105" viewBox="0 0 650 105">
+          <rect x="10" y="24" width="80" height="52" rx="8" fill="#081B2E" stroke="#00AEEF" stroke-width="1.5">
+            <animate attributeName="stroke-opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite" />
+          </rect>
+          <text x="18" y="54" fill="#00AEEF" font-size="8" font-family="Inter" font-weight="600">Transformer</text>
+          <line x1="100" y1="50" x2="140" y2="50" stroke="#00AEEF" stroke-width="2">
+            <animate attributeName="stroke-dashoffset" from="40" to="0" dur="2s" repeatCount="indefinite" />
+          </line>
+          <rect x="150" y="24" width="80" height="52" rx="8" fill="#081B2E" stroke="#00AEEF" stroke-width="1.5">
+            <animate attributeName="stroke-opacity" values="0.3;1;0.3" dur="2.2s" repeatCount="indefinite" />
+          </rect>
+          <text x="158" y="54" fill="#00AEEF" font-size="8" font-family="Inter" font-weight="600">Switchgear</text>
+          <line x1="240" y1="50" x2="280" y2="50" stroke="#00AEEF" stroke-width="2">
+            <animate attributeName="stroke-dashoffset" from="40" to="0" dur="2s" repeatCount="indefinite" />
+          </line>
+          <rect x="290" y="24" width="80" height="52" rx="8" fill="#081B2E" stroke="#00AEEF" stroke-width="1.5">
+            <animate attributeName="stroke-opacity" values="0.3;1;0.3" dur="2.4s" repeatCount="indefinite" />
+          </rect>
+          <text x="298" y="54" fill="#00AEEF" font-size="8" font-family="Inter" font-weight="600">Protection</text>
+          <line x1="380" y1="50" x2="420" y2="50" stroke="#00AEEF" stroke-width="2">
+            <animate attributeName="stroke-dashoffset" from="40" to="0" dur="2s" repeatCount="indefinite" />
+          </line>
+          <rect x="430" y="24" width="80" height="52" rx="8" fill="#081B2E" stroke="#FFD166" stroke-width="1.5">
+            <animate attributeName="stroke-opacity" values="0.3;1;0.3" dur="2.6s" repeatCount="indefinite" />
+          </rect>
+          <text x="438" y="54" fill="#FFD166" font-size="8" font-family="Inter" font-weight="600">Grid</text>
+          <circle cx="525" cy="50" r="5" fill="#FFD166" opacity="0.4">
+            <animate attributeName="r" values="3;7;3" dur="1.5s" repeatCount="indefinite" />
+          </circle>
+          <circle cx="525" cy="50" r="2" fill="#FFD166">
+            <animate attributeName="opacity" values="0.3;1;0.3" dur="1s" repeatCount="indefinite" />
+          </circle>
+        </svg>
+      </div>
+
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;">
+        <span class="wf-node">LV</span><span class="wf-node">MV</span><span class="wf-node">HV</span>
+        <span class="wf-node">Transformers</span><span class="wf-node">Switchgear</span>
+        <span class="wf-node">Breakers</span><span class="wf-node">CT/VT</span>
+        <span class="wf-node">Cables</span><span class="wf-node">Protection</span>
+        <span class="wf-node">Substations</span><span class="wf-node">SLD</span>
+        <span class="wf-node">Earthing</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section-pad" id="projects">
+    <div class="container">
+      <div class="section-label">Projects</div>
+      <h2>Engineering <span style="color:var(--solar);">Case Studies</span></h2>
+      <div class="grid-2" style="margin-top:20px;">
+        <div class="card"><i class="fas fa-solar-panel icon"></i>
+          <h3>34 kWp On-Grid PV</h3>
+          <p class="text-muted">Rooftop · String sizing · Inverter · SLD</p>
+          <div class="card-tags"><span>PV</span><span>String</span><span>Inverter</span></div>
+        </div>
+        <div class="card"><i class="fas fa-chart-line icon"></i>
+          <h3>PVsyst Simulation</h3>
+          <p class="text-muted">Energy yield · Loss analysis · PR</p>
+          <div class="card-tags"><span>PVsyst</span><span>Yield</span><span>Loss</span></div>
+        </div>
+        <div class="card"><i class="fas fa-water icon"></i>
+          <h3>Solar Water Pumping</h3>
+          <p class="text-muted">Hydraulics · Pump sizing · Controller</p>
+          <div class="card-tags"><span>Pumping</span><span>PV Sizing</span></div>
+        </div>
+        <div class="card"><i class="fas fa-tachometer-alt icon"></i>
+          <h3>Utility-Scale Study</h3>
+          <p class="text-muted">PV blocks · DC/AC · MV · SCADA</p>
+          <div class="card-tags"><span>Utility</span><span>DC/AC</span><span>MV</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE TIMELINE -->
+  <section class="section-pad" style="background:var(--dark-blue);" id="experience">
+    <div class="container">
+      <div class="section-label">Career</div>
+      <h2>Professional <span style="color:var(--blue);">Experience</span></h2>
+      <div class="timeline" style="margin-top:24px;">
+        <div class="timeline-item">
+          <span class="date">Feb 2026 – Jul 2026</span><br>
+          <span class="highlight">SAMCRETE Engineers & Contractors</span><br>
+          <span class="role">Site Engineer – Electrical / Solar PV</span><br>
+          <span style="color:var(--solar);">Obelisk Solar PV Project – Scatec</span>
+          <div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:4px;"><span
+              class="card-tags"><span>Utility</span><span>PV
+                Strings</span><span>Testing</span><span>Pre-Comm.</span></span></div>
+        </div>
+        <div class="timeline-item">
+          <span class="date">Feb 2024 – Present</span><br>
+          <span class="role">Qena Governorate</span><br>
+          <span class="text-muted">Technical Infrastructure & Electrical Systems Manager</span>
+        </div>
+        <div class="timeline-item">
+          <span class="date">Apr 2024 – Dec 2024</span><br>
+          <span class="role">GPR Radar Technician & Data Analyst</span><br>
+          <span class="text-muted">Underground utility detection · Data analysis</span>
+        </div>
+        <div class="timeline-item">
+          <span class="date">Nov 2023 – Jan 2024</span><br>
+          <span class="role">Huawei & Ericsson Projects</span><br>
+          <span class="text-muted">Site Electrical Engineer · DC Power · Batteries</span>
+        </div>
+        <div class="timeline-item">
+          <span class="date">May 2021 – Oct 2023</span><br>
+          <span class="role">Armed Forces Documentation Center</span><br>
+          <span class="text-muted">Electrical & Technical Department Officer / Department Manager</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section-pad" id="skills">
+    <div class="container">
+      <div class="section-label">Skills</div>
+      <h2>Technical <span style="color:var(--solar);">Expertise</span></h2>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:20px;">
+        <div>
+          <h4 style="color:var(--blue);font-size:0.9rem;font-weight:700;margin-bottom:6px;">Solar PV</h4>
+          <div style="display:flex;flex-wrap:wrap;gap:4px;"><span>PV Array</span><span>Strings</span><span>Combiner
+              Boxes</span><span>Inverters</span><span>DC Collection</span><span>PVsyst</span></div>
+        </div>
+        <div>
+          <h4 style="color:var(--blue);font-size:0.9rem;font-weight:700;margin-bottom:6px;">Electrical</h4>
+          <div style="display:flex;flex-wrap:wrap;gap:4px;">
+            <span>LV/MV/HV</span><span>Transformers</span><span>Switchgear</span><span>Breakers</span><span>Protection</span><span>SLD</span>
+          </div>
+        </div>
+        <div>
+          <h4 style="color:var(--blue);font-size:0.9rem;font-weight:700;margin-bottom:6px;">Site Engineering</h4>
+          <div style="display:flex;flex-wrap:wrap;gap:4px;"><span>Construction
+              Monitoring</span><span>Inspection</span><span>Punch-List</span><span>Quality Verification</span></div>
+        </div>
+        <div>
+          <h4 style="color:var(--blue);font-size:0.9rem;font-weight:700;margin-bottom:6px;">Testing & Commissioning</h4>
+          <div style="display:flex;flex-wrap:wrap;gap:4px;">
+            <span>Voltage</span><span>Polarity</span><span>Continuity</span><span>Insulation</span><span>Megger</span><span>Pre-Commissioning</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION & CERTIFICATIONS -->
+  <section class="section-pad" style="background:var(--dark-blue);">
+    <div class="container">
+      <div class="grid-2">
+        <div>
+          <div class="section-label">Education</div>
+          <h3>B.Sc. Communications & Electronics Engineering</h3>
+          <p class="text-muted">Higher Institute of Engineering – Luxor, Egypt · 2015–2020</p>
+          <p class="text-muted" style="margin-top:6px;">Postgraduate – Antennas Engineering, Aswan University ·
+            2022–2023</p>
+        </div>
+        <div>
+          <div class="section-label">Certifications</div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;">
+            <span class="wf-node">Solar Energy (PV) – ITI</span>
+            <span class="wf-node">PVsyst Training</span>
+            <span class="wf-node">PMP Exam Prep</span>
+            <span class="wf-node">CCNA</span>
+            <span class="wf-node">Microwave & Optical Fiber – NTI</span>
+            <span class="wf-node">IoT Applications – ITI</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- EVIDENCE -->
   <section class="section-pad" id="evidence">
     <div class="container">
-      <div class="section-title reveal"><span class="section-label">Evidence</span>
-        <h2>SHOW THE <span class="gold">ENGINEERING.</span></h2>
-      </div>
-      <div class="evidence-grid reveal">
+      <div class="section-label">Engineering Evidence</div>
+      <h2>Engineering <span style="color:var(--blue);">Evidence</span></h2>
+      <div class="evidence-grid" style="margin-top:16px;">
         <div class="evidence-item"><i class="fas fa-file-pdf"></i>
           <div>PVsyst Report</div>
-          <div style="font-size:0.7rem;color:var(--blue);">VIEW</div>
         </div>
         <div class="evidence-item"><i class="fas fa-draw-polygon"></i>
           <div>AutoCAD Layout</div>
-          <div style="font-size:0.7rem;color:var(--blue);">VIEW</div>
         </div>
         <div class="evidence-item"><i class="fas fa-project-diagram"></i>
           <div>SLD</div>
-          <div style="font-size:0.7rem;color:var(--blue);">VIEW</div>
         </div>
         <div class="evidence-item"><i class="fas fa-calculator"></i>
           <div>Calculations</div>
-          <div style="font-size:0.7rem;color:var(--blue);">VIEW</div>
         </div>
         <div class="evidence-item"><i class="fas fa-table"></i>
           <div>BOQ</div>
-          <div style="font-size:0.7rem;color:var(--blue);">VIEW</div>
         </div>
         <div class="evidence-item"><i class="fas fa-clipboard-check"></i>
           <div>Commissioning</div>
-          <div style="font-size:0.7rem;color:var(--blue);">VIEW</div>
         </div>
       </div>
-  </section>
-
-  <!-- CALCULATORS -->
-  <section class="section-pad" style="background:var(--dark-navy);" id="tools">
-    <div class="container">
-      <div class="section-title reveal"><span class="section-label">Tools</span>
-        <h2>INTERACTIVE <span class="gold">CALCULATORS</span></h2>
-      </div>
-      <div class="grid-2 reveal">
-        <div class="calc-card">
-          <h4>PV Capacity</h4>
-          <div class="formula">Modules × Module Power = PV Capacity</div><input type="number" id="modCount" value="20"
-            style="width:70px;"> <input type="number" id="modPower" value="550" style="width:70px;"> <button class="btn"
-            style="padding:4px 18px;font-size:0.8rem;" id="calcPv">=</button> <span class="calc-result"
-            id="pvResult">11000 W</span>
-        </div>
-        <div class="calc-card">
-          <h4>String Voltage</h4>
-          <div class="formula">Modules × Voc = String Voc</div><input type="number" id="strMod" value="12"
-            style="width:70px;"> <input type="number" id="vocVal" value="45.6" style="width:70px;"> <button class="btn"
-            style="padding:4px 18px;font-size:0.8rem;" id="calcVoc">=</button> <span class="calc-result"
-            id="vocResult">547.2 V</span>
-        </div>
-      </div>
-      <div style="margin-top:12px;font-size:0.7rem;color:var(--gray);" class="reveal">Engineering reference only —
-        verify final designs using applicable standards.</div>
+    </div>
   </section>
 
   <!-- CONTACT -->
   <section class="section-pad" id="contact">
     <div class="container">
-      <div class="contact-block reveal">
-        <h2 style="font-size:2.4rem;">LET'S BUILD <span class="gold">BETTER ENERGY</span> SYSTEMS.</h2>
-        <p style="color:var(--gray);max-width:600px;margin:16px 0;">Open to opportunities in Solar PV Engineering,
-          Renewable Energy, Technical Office, Site Engineering, Testing & Commissioning, O&M, Solar Pumping and Solar
-          Monitoring.</p>
+      <div class="contact-block">
+        <h2 style="font-size:2.2rem;">Let's Build <span style="color:var(--solar);">Something Powerful</span></h2>
+        <p style="color:var(--gray);">Qena, Egypt · +20 101 993 2826</p>
         <div class="contact-links">
-          <a href="#"><i class="fas fa-envelope"></i> EMAIL</a>
-          <a href="#"><i class="fab fa-linkedin"></i> LINKEDIN</a>
-          <a href="#"><i class="fab fa-github"></i> GITHUB</a>
-          <a href="#"><i class="fab fa-whatsapp"></i> WHATSAPP</a>
+          <a href="#"><i class="fas fa-envelope"></i> Email</a>
+          <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
+          <a href="#"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+          <a href="#" class="nav-cv" style="border-color:var(--solar);color:var(--solar)!important;">Download CV</a>
         </div>
       </div>
     </div>
@@ -1274,73 +1431,81 @@
 
   <!-- FOOTER -->
   <footer class="container">
-    <div><strong>LOAI HAMDOUN</strong><br>Electrical Engineer | Solar PV<br>Qena, Egypt</div>
+    <div><strong>Loai Hamdoun</strong><br>Electrical Engineer · Solar PV · Site Engineering<br>Qena, Egypt</div>
     <div style="display:flex;gap:20px;"><a href="#">LinkedIn</a><a href="#">GitHub</a><a href="#">Email</a></div>
   </footer>
 
   <!-- MODAL -->
-  <div class="modal-overlay" id="modalOverlay">
-    <div class="modal-box">
-      <h3>📄 Technical Document</h3>
-      <p class="text-muted">Preview placeholder. Replace with actual evidence.</p><button class="btn"
-        style="margin-top:20px;" id="closeModal">Close</button>
+  <div class="modal-overlay" id="modalOverlay"
+    style="position:fixed;inset:0;background:rgba(0,0,0,0.7);backdrop-filter:blur(8px);z-index:9999;display:none;align-items:center;justify-content:center;padding:20px;">
+    <div class="modal-box"
+      style="background:var(--dark-blue);max-width:600px;width:100%;border:1px solid var(--blue);border-radius:24px;padding:32px;">
+      <h3 style="color:var(--blue);">🔬 Test Detail</h3>
+      <p id="modalText" class="text-muted" style="margin:12px 0;"></p>
+      <button class="btn" style="margin-top:12px;" id="closeModal">Close</button>
     </div>
   </div>
 
   <script>
-    // ---------- JS ----------
-    // particles
-    (function () {
-      const c = document.getElementById('particles');
-      for (let i = 0; i < 25; i++) { const p = document.createElement('div'); p.className = 'particle'; p.style.left = Math.random() * 100 + '%'; p.style.top = Math.random() * 100 + '%'; p.style.animationDelay = (Math.random() * 20) + 's'; p.style.animationDuration = (15 + Math.random() * 20) + 's'; p.style.width = (2 + Math.random() * 4) + 'px'; p.style.height = p.style.width; c.appendChild(p); }
-    })();
-
-    // navbar scroll
+    // NAVBAR SCROLL
     const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); });
-
-    // scroll indicator
-    const fill = document.getElementById('scrollFill');
-    window.addEventListener('scroll', () => { const h = document.documentElement.scrollHeight - window.innerHeight; fill.style.height = (window.scrollY / h * 100) + '%'; });
-
-    // reveal
-    const reveals = document.querySelectorAll('.reveal');
-    const obs = new IntersectionObserver((e) => e.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); }), { threshold: 0.15 });
-    reveals.forEach(el => obs.observe(el));
-
-    // calculators
-    document.getElementById('calcPv').addEventListener('click', function () { const m = parseFloat(document.getElementById('modCount').value) || 0; const p = parseFloat(document.getElementById('modPower').value) || 0; document.getElementById('pvResult').textContent = (m * p) + ' W'; });
-    document.getElementById('calcVoc').addEventListener('click', function () { const m = parseFloat(document.getElementById('strMod').value) || 0; const v = parseFloat(document.getElementById('vocVal').value) || 0; document.getElementById('vocResult').textContent = (m * v).toFixed(1) + ' V'; });
-
-    // modal evidence
-    const modal = document.getElementById('modalOverlay');
-    document.querySelectorAll('.evidence-item').forEach(el => el.addEventListener('click', () => modal.classList.add('active')));
-    document.getElementById('closeModal').addEventListener('click', () => modal.classList.remove('active'));
-    modal.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
-
-    // project filter
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const projects = document.querySelectorAll('.project-card');
-    filterBtns.forEach(btn => {
-      btn.addEventListener('click', function () {
-        filterBtns.forEach(b => b.classList.remove('active')); this.classList.add('active');
-        const f = this.dataset.filter;
-        projects.forEach(p => {
-          if (f === 'all' || p.dataset.cat === f) p.style.display = 'block'; else p.style.display = 'none';
-        });
-      });
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
     });
 
-    // mobile toggle
+    // REVEAL
+    const reveals = document.querySelectorAll('.reveal');
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {if (entry.isIntersecting) entry.target.classList.add('visible');});
+    }, {threshold: 0.15});
+    reveals.forEach(el => obs.observe(el));
+
+    // TESTING MODAL
+    const modal = document.getElementById('modalOverlay');
+    const modalText = document.getElementById('modalText');
+    const testCards = document.querySelectorAll('.card[data-test]');
+    testCards.forEach(card => {
+      card.addEventListener('click', function () {
+        modalText.textContent = this.dataset.test || 'Engineering test detail.';
+        modal.style.display = 'flex';
+      });
+    });
+    document.getElementById('closeModal').addEventListener('click', () => modal.style.display = 'none');
+    modal.addEventListener('click', e => {if (e.target === modal) modal.style.display = 'none';});
+
+    // MOBILE TOGGLE
     const toggle = document.getElementById('mobileToggle');
     toggle.addEventListener('click', function () {
       const links = document.querySelector('.nav-links');
-      if (links.style.display === 'flex') { links.style.display = 'none'; }
-      else { links.style.display = 'flex'; links.style.flexDirection = 'column'; links.style.position = 'absolute'; links.style.top = '70px'; links.style.right = '20px'; links.style.background = '#07111F'; links.style.padding = '24px'; links.style.borderRadius = '20px'; links.style.border = '1px solid rgba(255,255,255,0.04)'; links.style.gap = '16px'; }
+      if (links.style.display === 'flex') {links.style.display = 'none';}
+      else {
+        links.style.display = 'flex';
+        links.style.flexDirection = 'column';
+        links.style.position = 'absolute';
+        links.style.top = '70px';
+        links.style.right = '20px';
+        links.style.background = '#050B14';
+        links.style.padding = '24px';
+        links.style.borderRadius = '20px';
+        links.style.border = '1px solid rgba(255,255,255,0.04)';
+        links.style.gap = '16px';
+        links.style.width = '200px';
+      }
     });
-    window.addEventListener('resize', () => { if (window.innerWidth > 900) { const l = document.querySelector('.nav-links'); l.style.display = 'flex'; l.style.flexDirection = 'row'; l.style.position = 'static'; l.style.background = 'transparent'; l.style.padding = '0'; l.style.border = 'none'; } });
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 900) {
+        const l = document.querySelector('.nav-links');
+        l.style.display = 'flex';
+        l.style.flexDirection = 'row';
+        l.style.position = 'static';
+        l.style.background = 'transparent';
+        l.style.padding = '0';
+        l.style.border = 'none';
+        l.style.width = 'auto';
+      }
+    });
 
-    console.log('⚡ Loai H. · Solar PV Engineering Portfolio');
+    console.log('⚡ Loai Hamdoun · Electrical Engineer · Solar PV');
   </script>
 </body>
 
